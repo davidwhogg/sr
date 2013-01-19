@@ -1,4 +1,12 @@
-SpecialRelativity
-=================
+Special Relativity Notes
+========================
 
-place for my SR notes (if I ever migrate them over from cvs)
+they exist, but not right here and not right now
+
+Author
+------
+- David W. Hogg (NYU)
+
+License
+-------
+All content is **copyright 1997, 2013 David W. Hogg**.
