@@ -9,6 +9,10 @@ License
 -------
 All content is **copyright 1997, 2025 David W. Hogg**.
 
+Notes
+-----
+- The tex files were recovered from a secret project called *HoggRogueKeep*.
+
 Bugs, Projects, To-do items
 ---------------------------
 - Gather together all comments over the years.
