@@ -1,0 +1,438 @@
+\chapter{The geometry of spacetime}
+\label{chap:geometry}
+
+Observers in different frames of reference, even if they are observing
+identical events, may observe very different relationships {\em
+between\/} those events.  For example, two events which are
+simultaneous for one observer will not, in general, be simultaneous
+for another observer.  However, the principle of relativity must hold,
+i.e., both observers must agree on all laws of physics and in
+particular on the speed of light.  This principle allows detailed
+construction of the differences between two observers' measurements as
+a function of their relative velocity.  In this chapter we derive some
+of these relationships using a very useful tool: the spacetime
+diagram.  With spacetime diagrams most special relativity problems are
+reduced to simple geometry problems.  The geometric approach is the
+most elegant method of solving special relativity problems and it is
+also the most robust because it requires the problem-solver to
+visualize the relationships between events and worldlines.
+
+
+\section{Spacetime diagrams}
+\label{sec:sd}
+
+Frances (F) and Gregory (G) live on planets A and B, respectively,
+separated in space by $\ell=6\times 10^{11}~{\rm m}$ (600 million km).
+Exactly halfway between their home planets, on the line joining them,
+is an interplanetary caf\'e (C), at which they decide to meet at noon.
+F has a standard-model spaceship which travels at speed $c/5$ (which
+corresponds to $\beta=1/5$), while G's sporty model travels at $c/3$
+($\beta=1/3$).  If we choose a coordinate system with the $x$-axis
+pointing along the direction from A to B, we can plot the
+trajectories, or {\em worldlines,\/} of F and G on a diagram with
+distance $x$ on the abscissa and time $t$ on the ordinate.  Actually,
+to emphasize the geometry of special relativity, we will use not $t$
+to mark time, but $ct$, which has dimensions of
+distance.\footnote{Recall the idea, from
+Section~\ref{sec:timedilation}, that $c$ is merely a conversion factor
+between time and distance.}
+\begin{figure}
+\horfigure{cafe.eps}
+\caption[Worldlines of F and G meeting at the caf\'e]{Worldlines of F
+and G meeting at the caf\'e, and worldlines of their home planets A
+and B, and the caf\'e itself, C.  The event of F's departure is $K$,
+of G's is $L$, and of their meeting is $M$.  This diagram is in the
+rest frame of A, B, and C because these objects have vertical
+worldlines.  Note that the time (vertical) axis is marked in units of
+distance $ct$.}
+\label{fig:cafe}
+\end{figure}
+Such a plot, as in Figure~\ref{fig:cafe}, is a {\em spacetime
+diagram.\/} Figure~\ref{fig:cafe} is clearly drawn in the rest frame
+of planets A and B: the planet worldlines are vertical; the planets do
+not change position with time.
+
+They meet at noon at the caf\'e.  Their meeting is an {\em event:\/}
+it takes place in a certain location, at a certain time.  Anything
+that has both a position and a time is an event.  For example, the
+signing of the United States' Declaration of Independence was an
+event: it took place on 4 July, 1776, and it took place in
+Philadelphia, Pennsylvania.  Each tick of a clock is an event: it
+happens at a given time at the location of the clock.  Events are
+3+1-dimensional\footnote{One could say ``4-dimensional,'' but it is
+customary among relativists to separate the numbers of space and time
+dimensions by a plus sign.  The reason for this will be touched upon
+later.}  points---they have three spatial coordinates and one time
+coordinate.  In the case of the meeting $M$ at the caf\'e of F and G,
+we needed only 1+1 dimensions to specify it because we began by
+restricting all activity to the $x$-axis, but in general 3+1
+dimensions are needed.  On Figure~\ref{fig:cafe}, event $M$ is marked,
+along with two other events $K$ and $L$, the departures of F and G.
+
+Because we are marking time in dimensions of distance $ct$, the
+inverse slope $\Delta x/(c\Delta t)$ of a worldline at some time $ct$
+is the speed of the corresponding object in units of $c$, or in other
+words, $\beta$.  As we will see below, nothing can travel faster than
+the speed of light.  So, all worldlines must be steeper than
+$45\degrees$ on the spacetime diagram, except, of course, for the
+worldlines of flashes of light or photons, which have exactly
+$45\degrees$ worldlines.  Radio, infrared, optical, ultraviolet, x-ray
+and gamma-ray signals all travel on $45\degree$ worldlines maybe
+neutrinos do too\footnote{As we will see in
+Chapter~\ref{chap:mechanics}, neutrinos travel at the speed of light
+only if they are massless; this is currently a subject of debate.}.
+
+\begin{problem}
+The next day F decides to meet G at the caf\'e again, but realizes
+that she did not arrange this with G in advance.  She decides to send
+a radio message that will get to G at exactly the time he should
+depart.  When should F send this message?
+\end{problem}
+
+We can answer this problem trivially by looking at the spacetime
+diagram.  If we drop a $45\degree$ line from event $L$, G's departure,
+going back in time towards planet A, we can find the event at which it
+intersects F's worldline.  This is done in
+Figure~\ref{fig:whentosend}; we see that it intersects F's worldline
+exactly at event $K$, the time of her departure.  This means that F
+should send the radio message at exactly the time she departs for the
+caf\'e.
+\begin{figure}
+\horfigure{cafe2.eps}
+\caption[When should F send the radio message?]{When should F send the
+radio message to G?  By dropping a $45\degree$ line (dotted) from
+event $L$ to F's worldline, we find that she should send it right when
+she departs; at event $K$.}
+\label{fig:whentosend}
+\end{figure}
+
+
+\section{Boosting: changing reference frames}
+\label{sec:boosting}
+
+Heather (H) and Juan (J) are two more residents of planets A and B
+respectively.  (A and B are separated by $\ell=6\times 10^{11}~{\rm
+m}$ in the $x$-direction.)  Early in the morning (at event $P$) H
+sends J a radio message.  At event $Q$, J receives the message.  A
+time $\tau$ later in the day, H sends J another message at event $R$,
+and J receives it at event $S$.  The spacetime diagram with these
+events and the worldlines of H, J and the messages is shown in
+Figure~\ref{fig:hjrest}.  The diagram is drawn in what we will call
+``H's frame'' or ``H's rest frame,'' because it is a reference frame
+in which H is at rest.
+\begin{figure}
+\horfigure{hjrest.eps}
+\caption[Spacetime diagram for H, J, and the messages in H's rest
+frame]{Spacetime diagram with worldlines of H, J, and the radio
+messages (dotted), along with the sending and receiving events.  This
+diagram is drawn in H's rest frame; her worldline is vertical.}
+\label{fig:hjrest}
+\end{figure}
+
+While this is all going on, Keiko (K) is travelling at speed $u$
+between planets A and B.  How do we re-draw the spacetime diagram in
+K's frame, a reference frame in which K is at rest?  First of all, K
+is moving at speed $u$ relative to H and J, so in K's frame H and J
+will be moving at speed $-u$.  Thus, H's and J's worldlines in K's
+frame will have equal but opposite slope to that of K's worldline in
+H's frame.  Time dilation (Section~\ref{sec:timedilation}) says that
+moving clocks go slow, so in K's frame, events $P$ and $R$ will be
+separated in time not by $\tau$ but by $\Delta t'=\gamma\,\tau$.  Same
+for $Q$ and $S$.  (All quantities in K's frame will be primed.)
+Length contraction (Section~\ref{sec:lengthcontraction}) says that
+moving ruler sticks are shortened.  This means that the distance
+separating the parallel worldlines of two objects moving at the same
+speed (the ``ends of the ruler stick'') is shorter by a factor
+$1/\gamma$ in a frame moving at speed $u$ than it is in the frame at
+which the two objects are at rest.  H and J, therefore, are separated
+by not $\ell$ but $\Delta x'=\ell /\gamma$ in the horizontal
+direction. Einstein's principle of relativity says that the speed of
+light is the same in both frames, so {\em the radio signals will still
+have $45\degree$ worldlines.\/} Thus, the spacetime diagram in K's
+frame must be that pictured in Figure~\ref{fig:hjk}.
+\begin{figure}
+\horfigure{hjk.eps}
+\caption[Spacetime diagram for H, J, and the messages in K's rest
+frame]{Spacetime diagram with worldlines of H, J, and the radio
+messages along with the sending and receiving events, now drawn in K's
+rest frame.  Note the time dilation and length contraction.}
+\label{fig:hjk}
+\end{figure}
+
+The transformation from H's frame to K's is a {\em boost
+transformation\/} because it involves changing velocity.  The boost
+transformation is central to special relativity; it is the subject of
+this and the next chapter.
+
+% Possible example problem: derive the full LT right here!
+
+\begin{problem}
+Re-draw the events and worldlines of Figures~\ref{fig:hjrest} and
+\ref{fig:hjk} from the point of view of an observer moving at the same
+speed as K relative to H and J but in the opposite direction.
+\end{problem}
+
+\begin{problem}
+A rocket ship of proper length $\ell_0$ travels at constant speed $v$
+in the $x$-direction relative to a frame $\cal S$.  The nose of the
+ship passes the point $x=0$ (in $\cal S$) at time $t=0$, and at this
+event a light signal is sent from the nose of the ship to the rear.
+(a)~Draw a spacetime diagram showing the worldlines of the nose and
+rear of the ship and the photon in $\cal S$.  (b)~When does the signal
+get to the rear of the ship in $\cal S$?  (c)~When does the rear of
+the ship pass $x=0$ in $\cal S$?  (After French 1966.)
+\end{problem}
+
+\begin{problem}
+At noon a rocket ship passes the Earth at speed $\beta=0.8$.
+Observers on the ship and on Earth agree that it is noon.  Answer the
+following questions, and draw complete spacetime diagrams in both the
+Earth and rocket ship frames, showing all events and worldlines:
+(a)~At 12:30 p.m., as read by a rocket ship clock, the ship passes an
+interplanetary navigational station that is fixed relative to the
+Earth and whose clocks read Earth time.  What time is it at the
+station?  (b)~How far from Earth, in Earth coordinates, is the
+station?  (c)~At 12:30 p.m. rocket time, the ship reports by radio
+back to Earth.  When does Earth receive this signal (in Earth time)?
+(d)~The station replies immediately.  When does the rocket receive the
+response (in rocket time)?  (After French 1966.)
+\end{problem}
+
+
+\section{The ``ladder and barn'' paradox}
+\label{sec:ladder1}
+
+Farmers Nettie (N) and Peter (P) own a barn of length $\ell$ and a
+ladder of length $2\ell$.  They want to put the ladder into the barn,
+but of course it is too long.  N suggests that P run with the ladder
+at speed $u =0.866c$.  At this speed $\gamma =2$, so the ladder will
+be shortened by enough to fit into the barn.  P objects.  P argues
+that if he is running with the ladder, in {\em his\/} frame the ladder
+will still have length $2\ell$ while the {\em barn\/} will be
+shortened to length $\ell/2$.  The running plan will only make the
+problem worse!
+
+They cannot both be right.  Imagine P running with the ladder through
+the front door of the barn and out the back door, and imagine that the
+barn is specially equipped with a front door that closes immediately
+when the back of the ladder enters the barn (event $C$), and a back
+door that opens immediately when the front of the ladder reaches it
+(event $D$).  Either there is a time when both doors are closed and
+the ladder is enclosed by the barn, or there is not.  If there is such
+a time, we will say that the ladder fits, and if there is not, we will
+say that it does not fit.  Who is right?  Is N right that the ladder
+is shorter and it will fit in the barn, or is P right that it isn't
+and won't?
+
+If we draw spacetime diagrams of the ladder and barn in both frames we
+get Figure~\ref{fig:ladder1}, where the front and back of
+the barn are labeled G and H respectively and the front and back of the
+ladder are J and K respectively.
+\begin{figure}
+\horfigure{ladder1.eps}
+\caption[The ladder and barn in both frames]{Worldlines of the front
+and back of the barn (G and H) and the front and back of the ladder (J
+and K) and events $C$ and $D$ in the rest frames of (a) N and (b) P.
+While events $C$ and $D$ are simultaneous in N's frame, they are not
+in P's.}
+\label{fig:ladder1}
+\end{figure}
+In N's frame, indeed, events $C$ and $D$ are simultaneous, so there is
+a brief time at which the ladder fits inside the barn.  In P's frame,
+strangely enough, the events are no longer simultaneous!  Event $D$
+happens long before event $C$, so there is no time at which the ladder
+is entirely inside the barn.  So indeed both N and P are correct:
+whether or not the ladder fits inside the barn is a frame-dependent
+question; it depends on whether or not two events are simultaneous,
+and {\em simultaneity is relative.\/}
+
+
+\section{Relativity of simultaneity}
+\label{sec:relofsimul}
+
+How can we synchronize two clocks that are at rest with respect to one
+another but separated by a distance $\ell$?  The simplest thing to do
+is to put a lightbulb halfway between the two clocks, flash it, and
+have each clock start ticking when it detects the flash.  The
+spacetime diagram in the rest frame $\rfr{S}$ for this synchronizing
+procedure is shown in Figure~\ref{fig:synch}, with the light bulb at
+the origin and the two clocks at $x=\pm\ell/2$.  The flash is marked
+as event $F$ and the detections of the flash as events $G$ and $H$.
+Thereafter, the clock ticks are shown as marks on the clock worldlines.
+\begin{figure}
+\horfigure{synch.eps}
+\caption[Synchronizing clocks in frame $\rfr{S}$.]{Synchronizing
+clocks at rest in frame $\rfr{S}$ by flashing a lightbulb halfway
+between them at event $F$ and having each clock start when it detects
+the flash (events $G$ and $H$).  After the two clocks receive the
+flashes, they tick as shown.  Lines of simultaneity connect
+corresponding ticks and are horizontal.}
+\label{fig:synch}
+\end{figure}
+Simultaneous ticks lie on horizontal lines on the spacetime diagram,
+because they occur at the same value of the time coordinate.  In fact,
+the horizontal lines can be drawn in; they are {\em lines of
+simultaneity.\/}
+
+Now consider a new frame $\rfr{S'}$ which is moving at speed
+$+u=\beta\, c$ in the $x$-direction with respect to $\rfr{S}$.  In
+this new frame, the worldlines of the clocks are no longer vertical
+because they are moving at speed $-u$, but by Einstein's principle of
+relativity the flashes of light must still travel on $45\degree$
+worldlines.  So the spacetime diagram in $\rfr{S'}$ looks like
+Figure~\ref{fig:synchprime}.
+\begin{figure}
+\horfigure{synchprime.eps}
+\caption[Clocks in frame $\rfr{S'}$ that are synchronized in
+$\rfr{S}$.]{The clocks as observed in frame $\rfr{S'}$ along with
+events $F$, $G$, $H$, and the subsequent ticks.  Although the clocks
+are synchronized in $\rfr{S}$ they are not in $\rfr{S'}$.  Note that
+the lines of simultaneity (horizontal in $\rfr{S}$) are slanted in
+$\rfr{S'}$.}
+\label{fig:synchprime}
+\end{figure}
+Note that in $\rfr{S'}$ the lines of simultaneity joining the
+corresponding ticks of the two clocks are no longer horizontal.  What
+does this mean?  It means that two events which are simultaneous in
+$\rfr{S}$ will not in general be simultaneous in $\rfr{S'}$.
+
+
+\section{The boost transformation}
+\label{sec:boosttx}
+
+We have seen in the previous section that ``horizontal'' lines of
+simultaneity in one frame become ``tilted'' in another frame moving
+with respect to the first, but can we quantify this?  We can, and it
+turns out that the lines of simultaneity in frame $\rfr{S}$ acquire
+slope $-\beta$ in frame $\rfr{S'}$ (which moves at speed $+\beta\, c$
+with respect to $\rfr{S}$) just as the lines of constant position in
+$\rfr{S}$ acquire slope $-1/\beta$ in $\rfr{S'}$.  A simple thought
+experiment to demonstrate this consists of two clocks, synchronized
+and at rest in $\rfr{S}$, exchanging photons simultaneously in
+$\rfr{S}$, as shown in Figure~\ref{fig:slope}.
+\begin{figure}
+\horfigure{slope.eps}
+\caption[Clocks exchanging photons in their rest frame.]{Clocks at
+rest and synchronized in frame $\rfr{S}$ exchanging photons.  They
+emit photons simultaneously at events $A$ and $B$}
+\label{fig:slope}
+\end{figure}
+In $\rfr{S}$ they emit photons simultaneously at events $A$ and $B$;
+the photons cross paths at event $C$; and then are received
+simultaneously at events $D$ and $E$.  In $\rfr{S'}$ events $A$ and
+$B$ are no longer simultaneous, nor are events $D$ and $E$.  However,
+light must still travel on $45\degree$ worldlines and the photons must
+still cross at an event $C$ halfway between the clocks.  So the
+spacetime diagram in $\rfr{S'}$ must look like
+Figure~\ref{fig:slope2},
+\begin{figure}
+\horfigure{slope2.eps}
+\caption[Clocks exchanging photons in another frame.]{Same as
+Figure~\ref{fig:slope} but in frame $\rfr{S'}$.}
+\label{fig:slope2}
+\end{figure}
+with the square $ABED$ in $\rfr{S}$ sheared into a parallelogram,
+preserving the diagonals as $45\degree$ lines.  We know that the slope
+of the lines of constant position transform to lines of slope
+$-1/\beta$; in order to have the diagonals be $45\degree$ lines, we
+need the lines of simultaneity to transform to lines of slope
+$-\beta$.
+
+This is really the essence of the boost transformation, the
+transformation from one frame to another moving with respect to it:
+the transformation is a shear or ``crunch'' along $45\degree$ lines.
+A shear is a linear transformation that does not involve rotation, but
+``squashes'' coordinates along one direction, allowing them to expand
+along the perpendicular direction.  In this case, these directions are
+photon trajectories or $45\degree$ worldlines.\footnote{The directions
+along which the squash and expansion take place are the {\em
+eigenvectors\/} of the transformation.  The ambitious reader is
+invited to calculate the two corresponding eigenvalues.}  We will
+derive the symbolic form of the boost transformation in
+Chapter~\ref{chap:lorentz}, but for now these geometrical facts are
+all we need.
+
+\begin{problem}
+Prove, using whatever you need (including possibly
+Figures~\ref{fig:slope} and \ref{fig:slope2}), that if the clock world
+lines have slope $1/\beta$ in some frame, the lines of simultaneity
+will have slope $\beta$.  The shorter the proof, the better.
+\end{problem}
+
+
+\section{Transforming space and time axes}
+\label{sec:txaxes}
+
+One extremely useful way of representing the boost transformation
+between two frames on spacetime diagrams is to plot the space and time
+axes of both frames on both diagrams.  This requires us to utilize two
+trivial facts: (a)~the spatial axis of a frame is just the line of
+simultaneity of that frame which passes through the origin event
+$(x,ct)=(0,0)$ and (b)~the time axis is just the line of constant
+position which passes through $(0,0)$.  So if we (arbitrarily)
+identify origin events in the two frames,\footnote{The zero of time
+and space are arbitrary, so, with no loss of generality, we can assign
+these values so that the origin events coincide.} we can plot, in
+frame $\rfr{S'}$, in addition to the $x'$ and $ct'$ axes, the
+locations of the $x$ and $ct$ axes of frame $\rfr{S}$
+(Figure~\ref{fig:bothaxes}(a)).  We can also plot both sets of axes in
+frame $\rfr{S}$.  This requires boosting not by speed $+\beta c$ but
+rather by $-\beta c$ and, as you have undoubtedly figured out, this
+slopes the lines in the opposite way, and we get
+Figure~\ref{fig:bothaxes}(b).
+\begin{figure}
+\horfigure{bothaxes.eps}
+\caption{Spacetime diagrams in frames (a)~$\rfr{S'}$ and
+(b)~$\rfr{S}$, each showing the time and space axes of both frames.}
+\label{fig:bothaxes}
+\end{figure}
+Again we see that the transformation is a shear.  Note that the boost
+transformation is not a rotation, at least not in the traditional
+sense of the word!
+
+We are now in a position to answer the question posed at the end of
+Section~\ref{sec:timedilation}: How can it be that two observers,
+moving relative to one another, can {\em both} observe the other's
+clock to tick more slowly than their own?  Imagine that observers at
+rest in $\rfr{S}$ and $\rfr{S'}$ both draw lines of constant position
+separated by 1~m of distance and lines of simultaneity separated by
+1~m of time (3.3~ns) through the spacetime maps of their frames.  In
+$\rfr{S}$, the $\rfr{S}$-observer's lines of constant position are
+vertical, and lines of simultaneity are horizontal.  The
+$\rfr{S'}$-observer's lines of constant position have slope $1/\beta$
+and lines of simultaneity have slope $-\beta$, as seen in
+Figure~\ref{fig:bothgrids}.
+simultaneity.
+\begin{figure}
+\horfigure{bothgrids.eps}
+\caption{Spacetime diagram in frame~$\rfr{S}$, showing the spacetime
+grids drawn by the observer at rest in $\rfr{S}$ (solid) and the
+observer at rest in $\rfr{S'}$ (dotted).  The $\rfr{S}$-observer's
+clock ticks with solid dots and the $\rfr{S'}$-observer's with open
+dots.  Note that when travelling along a dotted line of constant
+position, clock ticks are encountered less frequently than solid lines
+of simultaneity and when travelling along a solid line of constant
+position, clock ticks are encountered less frequently than dotted
+lines of simultaneity.  This explains how both observers can observe
+the other's clock to run slow.}
+\label{fig:bothgrids}
+\end{figure}
+In $\rfr{S}$, the horiztonal distance between the
+$\rfr{S'}$-observer's lines of constant position is $(1~{\rm
+m})/\gamma$.  Look carefully at Figure~\ref{fig:bothgrids}, which
+shows the ticks of each observer's clock along a line of constant
+position.  If we travel along the $\rfr{S'}$-observer's line of
+constant position, we find that we encounter ticks of the $\rfr{S'}$
+clock less frequently than lines of simultaneity in $\rfr{S}$.  On the
+other hand, if we travel along the $\rfr{S}$-observer's line of
+constant position, we find that we also encounter ticks of the
+$\rfr{S}$ clock less freqently than lines of simultaneity in
+$\rfr{S'}$.  That is, {\em both\/} observers find that the other's
+clock is going slow.  There is no contradiction.
+
+This point is subtle enough and important enough that the reader is
+advised to stare at Figure~\ref{fig:bothgrids} until it is understood.
+
+% Possible advanced section on how this IS a rotation but with cosh
+% and sinh.  Also, it is possible to do the Lorentz boost with the
+% ``generators'' of the Lorentz group.  See Leibovich for details.

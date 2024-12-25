@@ -1,0 +1,506 @@
+\chapter{The Lorentz transformation}
+\label{chap:lorentz}
+
+In this Chapter the invariant interval is introduced and the Lorentz
+transformation is derived and discussed.  There is a lot of algebra
+but it is straightforward and the results are simple.  The ``twin
+paradox'' is explained in terms of geodesics.
+
+
+\section{Proper time and the invariant interval}
+\label{sec:interval}
+
+In 3-dimensional space, two different observers can set up different
+coordinate systems, so they will not in general assign the same
+coordinates to a pair of points $P_1$ and $P_2$. However they will
+agree on the {\em distance\/} between them.  If one observer measures
+coordinate differences $\Delta x$, $\Delta y$ and $\Delta z$ between
+points $A$ and $B$, and another, with a different coordinate system,
+measures $\Delta x'$, $\Delta y'$ and $\Delta z'$, they will both
+agree on the total distance $\Delta r$, defined by
+\begin{eqnarray}
+(\Delta r)^2 & \equiv & (\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2 \nonumber\\
+             & = & (\Delta x')^2 + (\Delta y')^2 + (\Delta z')^2 \; .
+\end{eqnarray}
+We would like to find a similar quantity for pairs of events: some
+kind of `length' in 3+1-dimensional spacetime that is
+frame-independent, or the same for all observers.  There is such a
+quantity, and it is called the {\em invariant interval\/} or simply
+{\em interval,\/} it is symbolized by $(\Delta s)^2$ and defined by
+\begin{eqnarray}
+(\Delta s)^2 & \equiv & (c\,\Delta t)^2 - (\Delta r)^2 \nonumber\\
+& \equiv & (c\,\Delta t)^2 - (\Delta x)^2 - (\Delta y)^2 - (\Delta z)^2 \; ,
+\end{eqnarray}
+where $\Delta t$ is the difference in time between the events, and
+$\Delta r$ is the difference in space or the distance between the
+places of occurence of the events.
+
+To demonstrate this, recall Section~\ref{sec:timedilation} in which we
+considered the flashes of a lightclock carried by D.  In D's frame the
+flashes are separated by time $c\Delta t=1~{\rm m}$ and distance
+$\Delta x=0$.  The interval between flashes is therefore $(\Delta
+s)^2=(c\Delta t)^2-(\Delta x)^2=1~{\rm m^2}$.  In E's frame $c\Delta
+t'=\gamma\,(1~{\rm m})$ and $\Delta x=\gamma\,u\,(1~{\rm m})/c$, so
+the interval is $(\Delta s')^2=\gamma^2\,(1-u^2/c^2)\,(1~{\rm m^2})$.
+Since $\gamma\equiv (1-u^2)^{-1/2}$, $(\Delta s')^2=(\Delta
+s)^2=1~{\rm m^2}$.  Any other observer moving at any other speed $w$
+with respect to D will measure different time and space separations,
+but a similar argument will show that the interval is still $1~{\rm
+m^2}$.
+
+The {\em proper time\/} $\Delta\tau$ between two events is the time
+experienced by an observer in whose frame the events take place at the
+same point if there is such a frame.  As the above example shows, the
+square root of the invariant interval between the two events is $c$
+times the proper time, or $c\,\Delta\tau=\sqrt{(\Delta s)^2}$. The
+proper time is the length of time separating the events in D's frame,
+a frame in which both events occur at the same place.  If the interval
+is positive, there always is such a frame, because positive interval
+means $|c\,\Delta t|>|\Delta\tv{r}|$ so a frame moving at vector
+velocity $\tv{v}=(\Delta\tv{r})/(\Delta t)$, in which the events take
+place at the same point, is moving at a speed less than that of light.
+
+If the interval between two events is less than zero, i.e., $(\Delta
+s)^2<0$, it is still invarant even though there is no frame in which
+both events take place at the same point.  There is no such frame
+because necessarily it would have to move faster than the speed of
+light.  To demonstrate the invariance in this case, consider the
+clock-synchronizing procedure described in
+Section~\ref{sec:relofsimul}: two flashes are emitted together from a
+point halfway between the clocks, separated by one meter.  The clocks
+start when the flashes arrive, two events which are simultaneous in
+their rest frame.  In the rest frame the two starting events are
+separated by $c\,\Delta t=0$ and $\Delta x=1~{\rm m}$.  The interval is
+$(\Delta s)^2=-1~{\rm m^2}$.  In the frame moving at speed $u$ with
+respect to the rest frame, the clocks are separated by $(1~{\rm
+m})/\gamma$ and they are moving so the light takes time $(0.5~{\rm
+m})/[\gamma(c+u)]$ to get to one clock and $(0.5~{\rm m})/[\gamma(c-u)]$
+to get to the other so $c\,\Delta t'$ is $c$ times the difference
+between these, or $\gamma\,u\,(1~{\rm m})/c$.  Light travels at $c$ so
+the displacement $\Delta x'$ is the $c$ times the sum, or
+$\gamma\,(1~{\rm m})$.  The interval is $(\Delta s')^2=-1~{\rm m^2}$,
+same as in the rest frame.  Since any other relative speed $w$ could
+have been used, this shows that the interval is invariant even if it
+is negative.
+
+Sometimes the {\em proper distance\/} $\Delta\lambda$ is defined to be
+the distance separating two events in the frame in which they occur at
+the same time.  It only makes sense if the interval is negative, and
+it is related to the interval by $\Delta\lambda=\sqrt{|(\Delta
+s)^2|}$.
+
+Of course the interval $(\Delta s)^2$ can also be exactly equal to
+zero.  This is the case in which $(c\,\Delta t)^2=(\Delta r)^2$, or in
+which the two events lie on the worldline of a photon.  Because the
+speed of light is the same in all frames, a interval equal to zero in
+one frame must equal zero in all frames.  Intervals with $(\Delta
+s)^2=0$ are called ``lightlike'' or ``null'' while those with $(\Delta
+s)^2>0$ are called ``timelike'' and $(\Delta s)^2<0$ are called
+``spacelike''.  They have different causal properties, which will be
+discussed in Chapter~\ref{chap:causality}.
+
+
+\section{Derivation of the Lorentz transformation}
+\label{sec:derive}
+
+It would be nice to have algebraic formulae which allow us to compute
+the coordinates $(ct',x',y',z')$ of an event in one frame given the
+coordinates $(ct,x,y,z)$ of the event in some other frame.  In this
+section we derive these formulae by assuming that the interval is
+invariant and asking ``what kind of boost transformation will preserve
+the interval?'', making one or two appeals to common sense on the way.
+
+We want to find the linear\footnote{The reader may ask: why need the
+transformation be linear?  It needs to be linear because straight
+worldlines (i.e.\ constant-velocity worldlines) in one frame must
+transform into straight worldlines in all other frames.}
+transformation that takes the coordinates $(ct,x,y,z)$ of a
+4-displacement in frame $\rfr{F}$ to the coordinates $(ct',x',y',z')$
+it has in frame $\rfr{G}$ so that the interval is invariant and
+$\rfr{G}$ is moving at speed $u=\beta\, c$ in the $x$-direction with
+respect to $\rfr{F}$.
+
+In Section~\ref{sec:lengthcontraction}, we argued that there are no
+length distortions in the directions perpendicular to the direction of
+motion.  This means that the $y$- and $z$-coordinates of an event in
+$\rfr{F}$ must be the same as those in $\rfr{G}$;
+\begin{eqnarray}
+y' & = & y \nonumber\\
+z' & = & z
+\end{eqnarray}
+
+Linearity requires that the $x'$ and $t'$ components must be given by
+\begin{eqnarray}
+c\,t' & = & L_{t't}\, c\,t + L_{t'x}\, x \nonumber\\
+x' & = & L_{x't}\, c\,t + L_{x'x}\, x
+\end{eqnarray}
+where the $L_{i'j}$ are constants; or, in matrix\footnote{For a review
+of matrix algebra, see the excellent textbook by Strang (1976).  In
+short, a column vector multiplied by a matrix makes another column
+vector according to the rule
+$$
+\left(\begin{array}{c} y_1\\ y_2\\ y_3\\ y_4 \end{array}\right) =
+\left(\begin{array}{cccc}
+a_{11}&a_{12}&a_{13}&a_{14}\\
+a_{21}&a_{22}&a_{23}&a_{24}\\
+a_{31}&a_{32}&a_{33}&a_{34}\\
+a_{41}&a_{42}&a_{43}&a_{44}
+\end{array}\right)\,
+\left(\begin{array}{c} x_1\\ x_2\\ x_3\\ x_4 \end{array}\right)
+$$
+$$
+\;\;= \left(\begin{array}{c}
+a{11}x_1+a_{12}x_2+a_{13}x_3+a_{14}x_4 \\
+a{21}x_1+a_{22}x_2+a_{23}x_3+a_{24}x_4 \\
+a{31}x_1+a_{32}x_2+a_{33}x_3+a_{34}x_4 \\
+a{41}x_1+a_{42}x_2+a_{43}x_3+a_{44}x_4
+\end{array}\right)
+$$
+This is easily generalized to larger or smaller dimensions.} form,
+\begin{equation}
+\left(\begin{array}{c} c\,t' \\ x' \end{array}\right) =
+\left(\begin{array}{cc} L_{t't} & L_{t'x} \\
+L_{x't} & L_{x'x}\end{array}\right)
+\,
+\left(\begin{array}{c} c\,t \\ x \end{array}\right)
+\end{equation}
+
+From the previous chapter, we know that two events that occur in
+$\rfr{F}$ at the same place (so $\Delta x=0$) but separated by time
+$c\,\Delta t$ occur in $\rfr{G}$ separated by time $c\,\Delta
+t'=\gamma\, c\,\Delta t$ and therefore separated in space by $\Delta
+x'=-\beta\,c\,\Delta t'=-\beta\,\gamma\, c\,\Delta t$, where, as usual
+$\gamma\equiv(1-\beta^2)^{-1/2}$.  This implies
+\begin{eqnarray}
+L_{t't} & = & \gamma \nonumber\\
+L_{x't} & = & \gamma\,\beta
+\end{eqnarray}
+
+We also know that between any two events, the interval $\Delta s^2$ is
+the same in all frames.  When $\Delta y=\Delta z=0$, $(\Delta
+s)^2=(c\,\Delta t)^2-(\Delta x)^2$.  Combined with the above two
+matrix elements, the requirement that $(\Delta s)^2=(\Delta s)'^2$
+implies
+\begin{eqnarray}
+L_{t'x} = - \gamma\,\beta \nonumber\\
+L_{x'x} = \gamma
+\end{eqnarray}
+
+So we find that the transformation of the coordinates from one frame
+$\rfr{F}$ to another $\rfr{G}$ that is moving in the $x$-direction at
+relative speed $+u=\beta\,c$ is given by
+\begin{equation}
+\left(\begin{array}{c} c\,t' \\ x' \\ y' \\ z' \end{array}\right) =
+\left(\begin{array}{cccc}
+\gamma        & - \gamma\,\beta & 0 & 0 \\
+- \gamma\,\beta & \gamma        & 0 & 0 \\
+0             & 0             & 1 & 0 \\
+0             & 0             & 0 & 1
+\end{array}\right)\,
+\left(\begin{array}{c} c\,t \\ x \\ y \\ z \end{array}\right)
+\end{equation}
+
+
+\section{The Lorentz transformation}
+\label{sec:lt}
+
+The Lorentz transformation (hereafter LT) is very important and
+deserves some discussion.  The LT really transforms differences
+$(c\,\Delta t,\Delta x,\Delta y,\Delta z)$ between the coordinates of
+two events in one frame to differences $(c\,\Delta t',\Delta x',\Delta
+y',\Delta z')$ in another frame.  This means that if one is going to
+apply the LT directly to event coordinates, one must be very careful
+that a single event is at the origin $(0,0,0,0)$ of both
+frames.\footnote{There is a more general class of transformations,
+{\em Poincar\'e tranformations,\/} which allow translations of the
+coordinate origin as well LTs (which include boosts and, as we will
+see, rotations).}  In the previous section, we placed event $P$ at the
+origin of both frames.
+
+A simple consistency check we could apply to the LT is the following:
+If we boost to a frame moving at $u$, and then boost back by a speed
+$-u$, we should get what we started with.  In other words, LTs with
+equal and opposite speeds should be the inverses of one another.  If
+we change $u\rightarrow -u$, we have $\beta\rightarrow -\beta$ and
+$\gamma\rightarrow\gamma$, so boosting the coordinates $(ct',x')$ in
+frame $\rfr{K}$ back to $\rfr{H}$ and giving the new coordinates
+double-primes, we have
+\begin{eqnarray}
+ct'' & = & \gamma\, ct' + \beta\,\gamma\, x' \nonumber \\
+     & = & \gamma\, (\gamma\, ct - \beta\,\gamma\, x) 
+           + \beta\,\gamma\, (- \beta\,\gamma\, ct + \gamma\, x) \nonumber \\
+     & = & \gamma^2\, (ct - \beta\, x - \beta^2\, ct + \beta\, x) \nonumber \\
+     & = & \gamma^2\, (1 - \beta^2)\, ct \nonumber \\
+     & = & ct \\
+ x'' & = & \beta\,\gamma\, ct' + \gamma\, x' \nonumber \\
+     & = & \beta\,\gamma\, (\gamma\, ct - \beta\,\gamma\, x)
+           + \gamma\, (- \beta\,\gamma\, ct + \gamma\, x) \nonumber \\
+     & = & \gamma^2\, (\beta\, ct - \beta^2\, x - \beta\, ct + x) \nonumber \\
+     & = & \gamma^2\, (1 - \beta^2)\, x \nonumber \\
+     & = & x \; ,
+\end{eqnarray}
+so indeed, the boost of $-u$ is the inverse of the boost of $u$.
+
+The LT as defined above has the primed frame ($\rfr{K}$) moving at
+speed $+u$ with respect to the unprimed frame ($\rfr{H}$).  This is
+not a universal convention, but I will try to stick to it.
+
+The group of all LTs includes all linear transformations that preserve
+the interval\footnote{In fact, the astute reader will notice that
+there are linear transformations which preserve the interval but
+involve reversing the direction of time or reflecting space through a
+plane.  These do indeed satisfy the criteria to be LTs but they are
+known as ``improper'' LTs because they do not correspond to physically
+realizable boosts.  On the other hand, they do have some theoretical
+meaning in relativistic quantum mechanics, apparently.}.  This means
+that LTs include space rotations with no boost, for example
+\begin{equation}
+\left(\begin{array}{cccc}
+1 & 0 & 0 & 0 \\
+0 & \cos\theta & -\sin\theta & 0 \\
+0 & \sin\theta & \cos\theta & 0 \\
+0 & 0 & 0 & 1
+\end{array}\right)
+\end{equation}
+LTs also include boosts in arbitrary directions, not just the
+$x$-direction.  For an arbitrary relative velocity
+$\tv{u}=(u_x,u_y,y_z)$ of frame $\rfr{S}'$ with respect to $\rfr{S}$,
+the corresponding LT is
+\begin{equation}
+\left(\begin{array}{cccc}
+\gamma           & -\gamma\,\beta_x & -\gamma\,\beta_y & -\gamma\,\beta_z \\
+-\gamma\,\beta_x
+  & 1+\frac{(\gamma-1)\,\beta_x^2}{\beta^2}
+  & \frac{(\gamma-1)\,\beta_x\,\beta_y}{\beta^2}
+  & \frac{(\gamma-1)\,\beta_x\,\beta_z}{\beta^2} \\
+-\gamma\,\beta_y
+  & \frac{(\gamma-1)\,\beta_x\,\beta_y}{\beta^2}
+  & 1+\frac{(\gamma-1)\,\beta_y^2}{\beta^2}
+  & \frac{(\gamma-1)\,\beta_y\,\beta_z}{\beta^2} \\
+-\gamma\,\beta_z
+  & \frac{(\gamma-1)\,\beta_x\,\beta_z}{\beta^2}
+  & \frac{(\gamma-1)\,\beta_y\,\beta_z}{\beta^2}
+  & 1+\frac{(\gamma-1)\,\beta_z^2}{\beta^2} \\
+\end{array}\right)
+\end{equation}
+where we define
+\begin{eqnarray}
+& \beta_x \equiv u_x/c \nonumber\\
+& \beta_y \equiv u_y/c \nonumber\\
+& \beta_z \equiv u_z/c \nonumber\\
+& \beta^2 \equiv \beta_x^2 + \beta_y^2 + \beta_z^2 \nonumber\\
+& \gamma \equiv (1-\beta_x^2-\beta_y^2-\beta_z^2)^{-1/2}
+\end{eqnarray}
+(see, e.g., Jackson, 1975, Chapter~11).  And, of course, any
+composition of arbitrary LTs is also an LT.
+
+\begin{problem}
+Transform the events $A$ $(ct,x)=(0,0)$, $B$ $(0,1\,{\rm m})$, $C$
+$(1/2\,{\rm m},1/2\,{\rm m})$, $D$ $(1\,{\rm m},0)$, and $E$ $(1\,{\rm
+m},1\,{\rm m})$ into a frame $\rfr{S}'$ moving at speed $+0.6c$ in the
+$x$-direction with respect to the unprimed frame $\rfr{S}$.  Draw
+spacetime diagrams of both frames showing the five events.
+\end{problem}
+
+To check your answer: notice that $A$, $C$, and $E$ all lie on a
+$45\degree$ worldline, as do $B$, $C$, and $D$.  The LT must transform
+$45\degree$ worldlines to $45\degree$ worldlines because the speed of
+light is $c$ in all frames.
+
+\begin{problem}
+Write down the transformation from a frame $\cal S$ to a frame $\cal
+S'$ moving at $+0.5c$ in the $x$-direction and then to another frame
+$\cal S''$ moving at $+0.5c$ in the $x$-direction relative to $\cal
+S'$.  What is the complete transformation from $\cal S$ to $\cal S''$?
+What relative speed between frames $\cal S$ and $\cal S''$ does your
+answer imply?
+\end{problem}
+
+\begin{problem}
+Show that the transformations given for a coordinate rotation
+and for a boost in an arbitrary direction preserve the interval.
+\end{problem}
+
+\begin{problem}
+Do space reflections and time-reversals preserve the interval?
+\end{problem}
+
+\begin{problem}
+Denote by $E$ the event on the $ct$-axis of a spacetime diagram
+that is a proper time $c\tau$ from the origin.  What is the locus of
+all events on the spacetime diagram that are separated from the origin
+by the same proper time?
+\end{problem}
+
+The answer should be a hyperbola that asymptotes to the line $ct=x$
+but which is horizontal on the spacetime diagram right at $E$.
+
+\begin{problem}
+Denote by $F$ the event on the $x$-axis of a spacetime diagram that is
+a distance $\ell$ from the origin.  What is the locus of all events
+which are separated from the origin by the same interval as $F$?
+\end{problem}
+
+
+\section{Velocity addition}
+\label{sec:vadd}
+
+We are now in a position to derive the correct velocity addition law
+that replaces the simple but incorrect one suggested in
+Section~\ref{sec:einstein}: If A moves at speed $+u$ in the
+$x$-direction with respect to B, and A throws a cantaloupe at speed
+$+v$ in the $x$-direction relative to himself, at what speed $w$ does
+B observe the cantaloupe to travel?  The simple but incorrect answer
+is $w=u+v$.  The correct answer can be quickly calculated with a
+Lorentz transformation.  Call the throwing event $T$ and put it at the
+origin of both frames, so $(ct_T,x_T)=(ct_T',x_T')=(0,0)$, where A's
+frame gets the primes.  Now imagine that at some time $t'$ later in
+A's frame, the cantaloupe explodes, this explosion event $E$ must
+occur at coordinates $(ct',vt')$ in A's frame.  In B's frame, by
+definition, $T$ occurs at the origin, but by applying the LT with
+speed $-u$ (defining $\beta\equiv u/c$ and $\gamma$ accordingly) $E$
+now occurs at
+\begin{eqnarray}
+ct & = & \gamma\, ct' + \beta\,\gamma\, vt' \nonumber\\
+x & = & \beta\,\gamma\, ct' + \gamma\, vt'
+\end{eqnarray}
+The speed $w$ measured by B is simply $x/t$ or
+\begin{eqnarray}
+w & = & c\,\frac{\beta\,\gamma\, ct' + \gamma\, vt'}
+                {\gamma\, ct' + \beta\,\gamma\, vt'} \nonumber\\
+  & = & \frac{u + v}{1 + uv/c^2}
+\end{eqnarray}
+which is less than $u+v$.  Spacetime diagrams for this calculation are
+shown in Figure~\ref{fig:vadd}.
+\begin{figure}
+\horfigure{vadd.eps}
+\caption[Velocity addition illustrated.]{Spacetime diagrams of the
+throw $T$ and explosion $E$ of C by A, as observed by (a)~A and (b)~B
+for the purposes of computing the velocity addition law.}
+\label{fig:vadd}
+\end{figure}
+
+\begin{problem}
+In an interplanetary race, slow team X is travelling in their old
+rocket at speed $0.9c$ relative to the finish line.  They are passed
+by faster team Y, observing Y to pass X at $0.9c$.  But team Y
+observes fastest team Z to pass Y's own rocket at $0.9c$.  What are
+the speeds of teams X, Y and Z relative to the finish line?
+\end{problem}
+
+The answer is not $0.9c$, $1.8c$, and $2.7c$!
+
+\begin{problem}
+An unstable particle at rest in the lab frame splits into two
+identical pieces, which fly apart in opposite directions at Lorentz
+factor $\gamma=100$ relative to the lab frame.  What is one particle's
+Lorentz factor relative to the other?  What is its speed relative to
+the other, expressed in the form $\beta\equiv 1-\epsilon$?
+\end{problem}
+
+\begin{problem}
+Determine the transformation law for an arbitrary 3-vector velocity
+$\tv{v}=(v_x,v_y,v_z)$.
+\end{problem}
+
+
+\section{The twin paradox}
+\label{sec:twins}
+
+Lin (L) and Ming (M) are twins, born at the same time, but with very
+different genes: L is an astronaut who likes to explore outer space,
+and M is a homebody who likes to stay at home on Earth and read
+novels.\footnote{Do not regard this statement as a position on the
+nature/nurture debate.}  When both L and M turn 20, L leaves on a
+journey to a nearby star.  The star is $\ell=30$~light years away and
+L chooses to travel out at speed $u=0.99 c$ and then immediately turn
+around and come back.  From M's point of view, the journey will take
+time $T=2\ell /u\approx 60~{\rm yr}$, so L will return when M is 80.
+How much will L have aged over the same period?
+
+In Section~\ref{sec:timedilation} we learned that moving clocks go
+slow, so L will have aged by $T'=T/\gamma$, where $\gamma\equiv
+(1-\beta^2)^{-1/2}$ and $\beta\equiv u/c$.  For $u=0.99 c$,
+$\gamma=7$, so L will have aged less than $9~{\rm yr}$.  That is, on
+L's arrival home, M will be 80, but L will only be 28!  Strange, but
+in this special relativistic world, we are learning to live with
+strangeness.
+
+During his journey, Ming starts to get confused about this argument.
+After all, there is no preferred reference frame.  If one looks at the
+Earth from the point of view of Ming's rocket, one sees the Earth
+travel out at speed $u$ and come back.  So isn't L's clock the one
+that runs slow, and won't L the one who will be younger upon return?
+How can this be resolved?
+
+In Figure~\ref{fig:twins}, the worldlines of L and M are plotted in
+the rest frame of the Earth (frame $\rfr{S}$), with L's departure
+marked as event $D$, L's turnaround at the distant star as $T$ and her
+return home as $R$.
+\begin{figure}
+\horfigure{twins.eps}
+\caption[Worldlines of the twins L and M.]{Worldlines of the twins L
+and M in frame $\rfr{S}$, with L's departure marked as $D$, turnaround
+as $T$ and return home as $R$.}
+\label{fig:twins}
+\end{figure}
+You will recall that in Section~\ref{sec:interval} we saw that along a
+worldline, the proper time, or time elapsed for an observer
+travelling along the worldline, is the square root of the interval
+$(\Delta s)^2=(c\,\Delta t)^2-(\Delta x)^2$.  M does not move, so
+$\Delta x=0$ and the proper time for him is just $\Delta t_{DR}$.  L
+moves very quickly, so $(\Delta x)$ is not zero, so her proper time
+out to event $T$ and back again will be much smaller than simply
+$\Delta t_{DR}$.  Smaller, of course, by a factor $1/\gamma$.
+
+Let's draw this now in L's frame.  But we have a problem: just what
+frame do we choose?  Do we choose the frame $\rfr{S'}$ that is L's
+rest frame on her way out to the star, or the frame $\rfr{S''}$ that
+is L's rest frame on the way back?  We cannot choose both because they
+are different frames: L {\em changes frames\/} at event $T$.  This
+breaks the symmetry and resolves the paradox: M travels from event $D$
+to event $R$ in a single frame with no changes, while L changes
+frames.  L's worldline is crooked while M's is
+straight\footnote{Another, fundamentally incorrect, but nonetheless
+useful, way to distinguish the twins is to imagine that despite their
+genetic differences, they are both avid coffee drinkers.  If they each
+spend the entire time between events $D$ and $R$ drinking coffee, L
+experiences no trouble at all, but M finds that he spills his coffee
+all over himself at event T.  After all, his spaceship suffers a huge
+acceleration at that time.  L experiences no such trauma.  This
+explanation is fundamentally flawed because if we allow for
+gravitational forces, there are many ways to construct twin paradoxes
+which do not involve this asymmetry.}.
+
+It is easy to show that given any two events and a set of worldlines
+that join them, the worldline corresponding to the path of longest
+proper time is the straight line.  Just as in Euclidean space the
+straight line can be defined as the shortest path between two points,
+in spacetime the straight worldline can be defined as the path of
+{\em longest proper time.\/}  This is in fact the definition, and
+straight worldlines are called {\em geodesics.\/}
+
+\begin{problem}
+Prove that the straight worldline joining any two events $E$ and $F$
+is the line of maximum proper time.  Hint: begin by transforming into
+the frame in which $E$ and $F$ occur at the same place.
+\end{problem}
+
+\begin{problem}
+Imagine that every year, on their respective birthdays, each twin
+sends the other a radio message (at the speed of light).  Re-draw
+Figure~\ref{fig:twins} on graph paper and draw, as accurately as
+possible, L's birthday messages in red and M's birthday messages in
+blue.  How many messages does each twin receive?  At what ages to they
+receive them?
+\end{problem}
+
+\begin{problem}
+Imagine that rather than taking one long trip out and back, Ming in
+fact takes five shorter trips out and back, but all at the same speed
+$\beta$, and elapsing the same total time (on Lin's clock) for all the
+trips, as in the single-trip case.  What effect does this have on
+Ming's aging relative to Lin's, as compared with the single-trip
+case?  Estimate how much less a commercial airline pilot ages relative
+to her or his spouse over her or his lifetime.
+\end{problem}

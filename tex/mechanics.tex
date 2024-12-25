@@ -1,0 +1,736 @@
+\chapter{Relativistic mechanics}
+\label{chap:mechanics}
+
+
+\section{Scalars}
+\label{sec:scalars}
+
+A {\em scalar\/} is a quantity that is the same in all reference
+frames, or for all observers.  It is an {\em invariant\/} number.  For
+example, the interval $(\Delta s)^2$ separating two events $A$ and $B$
+is a scalar because it is the same in all frames.  Similarly, the
+proper time $\Delta\tau$ between two events on a worldline is a
+scalar.  In Chapter~\ref{chap:time}, the number of ticks of D's clock
+in going from planet A to planet B is a scalar because although
+observers disagree on how far apart the ticks are in time, they agree
+on the total number.
+
+It is worth emphasizing that the time interval $\Delta t$ between two
+events, or the distance $\Delta x$ between two events, or the the
+length $\ell$ separating two worldlines are {\em not\/} scalars: they
+do not have frame-independent values\footnote{Forget high
+school---where all single-component numbers were probably referred to
+as ``scalars.''}.
+
+
+\section{4-vectors}
+\label{sec:4-vectors}
+
+Between any two distinct events $A$ and $B$ in spacetime, there is a
+time difference $c\,\Delta t$ and three coordinate difference $\Delta
+x$, $\Delta y$ and $\Delta z$.  These four numbers can be written as a
+vector $\fv{x}$ with four components, which is called a {\em
+4-vector\/}:
+\begin{equation}
+\fv{x} = (c\,\Delta t, \Delta x, \Delta y, \Delta z)
+\end{equation}
+The 4-vector\footnote{The convention in these notes is to denote
+4-vectors with vector hats and 3-vectors with bold face symbols.}
+$\fv{x}$ is actually a frame-independent object, although this is a
+fairly subtle concept.  The components of $\fv{x}$ are not
+frame-independent, because they transform by the Lorentz
+transformation (Section~\ref{sec:lt}).  But event $A$ is frame
+independent: if it occurs in one frame, it must occur in all frames,
+and so is event $B$, so there is some frame-independent meaning to the
+4-vector displacement or {\em 4-displacement\/} between these events:
+it is the 3+1-dimensional arrow in spacetime that connects the two
+events.
+
+The frame-independence can be illustrated with an analogy with
+3-dimensional space.  Different observers set up different coordinate
+systems and assign different coordinates to two points $P$ and $Q$,
+say Pittsburgh, PA and Queens, NY.  Although both observers agree that
+they are talking about Pittsburgh and Queens, they assign different
+coordinates to the points.  The observers can also discuss the
+3-displacement $\tv{r}$ separating $P$ and $Q$.  Again, they may
+disagree on the coordinate values of this 3-vector, but they will
+agree that it is equal to the vector that separates points $P$ and
+$Q$.  They will also agree on the length of $\tv{r}$ and they will
+agree on the angle it makes with any other vector $\tv{s}$, say the
+vector displacement between $P$ and $R$ (Richmond, VA).  In this sense
+the points and 3-vector are frame-independent or coordinate-free
+objects, and it is in the same sense that events and 4-vectors are
+frame-independent objects.
+
+With each 4-displacement we can associate a scalar: the interval
+$(\Delta s)^2$ along the vector.  The interval associated with
+$\fv{x}$ is
+\begin{equation}
+(\Delta s)^2 = (c\,\Delta t)^2 - (\Delta x)^2 - (\Delta y)^2 - (\Delta
+z)^2
+\end{equation}
+Because of the similarity of this expression to that of the dot
+product between 3-vectors in three dimensions, we also denote this
+interval by a dot product and also by $|\fv{x}|^2$:
+\begin{equation}
+\fv{x}\cdot\fv{x} \equiv \left|\fv{x}\right|^2 \equiv
+(c\,\Delta t)^2 - (\Delta x)^2 - (\Delta y)^2 - (\Delta z)^2
+\end{equation}
+and we will sometimes refer to this as the {\em magnitude\/} or {\em
+length\/} of the 4-vector.
+
+We can generalize this dot product to a dot product between any two
+4-vectors $\fv{a}=(a_t,a_x,a_y,a_z)$ and $\fv{b}=(b_t,b_x,b_y,b_z)$:
+\begin{equation}
+\fv{a}\cdot\fv{b} \equiv
+a_t\, b_t - a_x\, b_x - a_y\, b_y - a_z\, b_z
+\end{equation}
+It is easy to show that this dot product obeys the rules we expect dot
+products to obey: associativity over addition and commutativity.  The
+nice result is that the dot product produces a scalar.  That is, the
+dot product of any two 4-vectors in one frame equals their dot product
+in any other frame.
+
+When frames are changed, 4-displacements transform according to the
+Lorentz transformation.  Because 4-displacements are 4-vectors, it
+follows that all 4-vectors transform according to the Lorentz
+transformation.  This provides a simple (though slightly out-of-date)
+definition of a 4-vector: an ordered quadruple of numbers that
+transforms according to the Lorentz transformation.
+
+Because scalars, by definition, do not change under a Lorentz
+transformation, any 4-component object which transforms according to
+the Lorentz transformation can be multiplied or divided by a scalar to
+give a new four-component object which also transforms according to
+the Lorentz transformation.  In other words, a 4-vector multiplied or
+divided by a scalar is another 4-vector.
+
+\begin{problem}
+Show that the 3+1-dimensional dot product obeys associativity
+over addition, i.e., that
+\begin{equation}
+\fv{a}\cdot(\fv{b}+\fv{c}) = \fv{a}\cdot\fv{b}+\fv{a}\cdot\fv{c}
+\end{equation}
+and commutativity, i.e., that $\fv{a}\cdot\fv{b}=\fv{b}\cdot\fv{a}$.
+\end{problem}
+
+\begin{problem}
+ Show that the dot product of two 4-vectors is a scalar.  That is,
+show that for any two 4-vectors $\fv{a}$ and $\fv{b}$, their dot
+product in one frame $\rfr{S}$ is equal to their dot product in
+another $\rfr{S'}$ moving with respect to $\rfr{S}$.
+\end{problem}
+
+\begin{problem}
+Show that 4-vectors are closed under addition.  That is, show
+that for any two 4-vectors $\fv{a}$ and $\fv{b}$, their sum
+$\fv{c}=\fv{a}+\fv{b}$ (i.e., each component of $\fv{c}$ is just the
+sum of the corresponding components of $\fv{a}$ and $\fv{b}$) is also
+a 4-vector.  Show this by comparing what you get by Lorentz
+transforming and then summing with what you get by summing and then
+Lorentz transforming.
+\end{problem}
+
+
+\section{4-velocity}
+\label{sec:4-vel}
+
+What is the 3+1-dimensional analog of velocity?  We want a 4-vector so
+we want a four-component object that transforms according to the
+Lorentz transformation.  In 3-dimensional space, 3-velocity $\tv{v}$
+is defined by
+\begin{equation}
+\tv{v} \equiv \lim_{\Delta t\rightarrow 0} \frac{\Delta\tv{r}}{\Delta t}
+= \frac{d\tv{r}}{dt}
+\end{equation}
+where $\Delta t$ is the time it takes the object in question to go the
+3-displacement $\Delta\tv{r}$.  The naive 3+1-dimensional
+generalization would be to put the 4-displacement $\Delta\fv{x}$ in
+place of the 3-displacement $\Delta\tv{r}$.  However, this in itself
+won't do, because we are dividing a 4-vector by a non-scalar (time
+intervals are not scalars); the quotient will not transform according
+to the Lorentz transformation.  The fix is to replace $\Delta t$ by
+the proper time $\Delta\tau$ corresponding to the interval of the
+4-displacement; the 4-velocity $\fv{u}$ is then
+\begin{equation}
+\fv{u}\equiv\lim_{\Delta\tau\rightarrow 0}\frac{\Delta\fv{x}}{\Delta\tau}
+\end{equation}
+When we take the limit we get derivatives, and the proper time
+$\Delta\tau$ is related to the coordinate time $\Delta t$ by
+$\gamma\,\Delta\tau =\Delta t$ (where, as usual, $\gamma\equiv
+(1-\beta^2)^{-1/2}$ and $\beta\equiv |\tv{v}|/c$), so
+\begin{eqnarray}
+\fv{u} & = & \frac{d\fv{x}}{d\tau} \nonumber\\
+& = & \left(c\,\frac{dt}{d\tau},\frac{dx}{d\tau},
+            \frac{dy}{d\tau},\frac{dz}{d\tau} \right) \nonumber\\
+& = & \left(c\,\gamma\,\frac{dt}{dt},\gamma\,\frac{dx}{dt},
+            \gamma\,\frac{dy}{dt},\gamma\,\frac{dz}{dt} \right) \nonumber\\
+& = & (\gamma\,c,\gamma\,v_x,\gamma\,v_y,\gamma\,v_z)
+\end{eqnarray}
+where $(v_x,v_y,v_z)$ are the components of the 3-velocity
+$\tv{v}=d\tv{r}/dt$.  Although it is unpleasant to do so, we often
+write 4-vectors as two-component objects with the first component a
+single number and the second a 3-vector.  In this notation
+\begin{equation}
+\fv{u} = (\gamma\,c,\gamma\,\tv{v})
+\end{equation}
+
+What is the magnitude of $\fv{u}$?  There are several ways to derive
+it, the most elegant is as follows.  The magnitude $|\fv{u}|^2$ must
+be the same in all frames because $\fv{u}$ is a four-vector.  Let us
+change into the frame in which the object in question is at rest.  In
+this frame $\fv{u}=(c,0,0,0)$ because $\tv{v}=(0,0,0)$ and $\gamma=1$.
+Clearly in this frame $|\fv{u}|^2=c^2$ or $|\fv{u}|=c$.  It is a
+scalar so it must have this value in all frames.  Thus $|\fv{u}|=c$ in
+all frames.  This trivial ``proof'' is a good model for
+problem-solving in special relativity: identify something which is
+frame-independent, transform into a frame in which it is easy to
+calculate, and calculate it.  The answer will be good for all frames.
+
+The reader may find this a little strange.  Some particles move
+quickly, some slowly, but for all particles, the magnitude of the
+4-velocity is $c$.  But this is not strange, because we need the
+magnitude to be a scalar, the same in all frames.  If I change frames,
+some of the particles that were moving quickly before now move slowly,
+and some of them are stopped altogether.  Speeds (magnitudes of
+3-velocities) are relative; the magnitude of the 4-velocity has to be
+invariant.
+
+\begin{problem}
+Apply the formula for the magnitude of a 4-vector to the general
+4-velocity $(\gamma\,c,\gamma\,v_x,\gamma\,v_y,\gamma\,v_z)$ to show
+that its magnitude is indeed $c$.
+\end{problem}
+
+
+\section{4-momentum, rest mass and conservation laws}
+\label{sec:4-mom}
+
+Just as in non-relativistic 3-space, where 3-momentum was defined as
+mass times 3-velocity, in spacetime 4-momentum $\fv{p}$ is mass $m$
+times 4-velocity $\fv{u}$.  Under this definition, the mass must be a
+scalar if the 4-momentum is going to be a 4-vector.  If you are old
+enough, you may have heard of a quantity called ``relativistic mass''
+which increases with velocity, approaching infinity as an object
+approaches the speed of light.  Forget whatever you heard; that
+formulation of special relativity is archaic and ugly.  The mass $m$
+of an object as far as we are concerned is its {\em rest mass,\/} or
+the mass we would measure if we were at rest with respect to the
+object.
+
+Rest mass is a scalar in that although different observers who are all
+moving at different speeds with respect to the object may, depending
+on the nature of their measuring apparati, measure different masses for
+an object, they all can agree on what its mass would be if they were
+at rest with respect to it.  In this respect rest mass is like the
+proper time scalar: the only observers whose clocks actually measure
+the proper time between two events are the observers for whom the two
+events happen in the same place.  But all observers agree on what that
+proper time is.
+
+The 4-momentum $\fv{p}$ is thus
+\begin{eqnarray}
+\fv{p} & \equiv & m\,\fv{u} \nonumber\\
+& = & (\gamma\,m\,c,\gamma\,m\,v_x,\gamma\,m\,v_y,\gamma\,m\,v_z) \nonumber\\
+& = & (\gamma\,m\,c,\gamma\,m\,\tv{v})
+\end{eqnarray}
+Again, by switching into the rest frame of the particle, we find that
+$|\fv{p}|=m\,c$.  This is also obvious because $\fv{p}=m\,\fv{u}$ and
+$|\fv{u}|=c$.  As with 4-velocity, it is strange but true that the
+magnitude of the 4-momentum does not depend on speed.  But of course
+it cannot, because speeds are relative.
+
+Why introduce all these 4-vectors, and in particular the 4-momentum?
+In non-relativistic mechanics, 3-momentum is conserved.  However, by
+Einstein's principle, all the laws of physics must be true in all
+uniformly moving reference frames.  Because only scalars and 4-vectors
+are truly frame-independent, relativistically invariant conservation
+of momentum must take a slightly different form: in all interactions,
+collisions and decays of objects, {\em the total 4-momentum is
+conserved\/}.  Furthermore, its time component is energy $E/c$ (we
+must divide by $c$ to give it the same dimensions as momentum) and its
+spatial components make up a correct, relativistic expression for the
+3-momentum $\tv{p}$.  We are actually re-defining $E$ and $\tv{p}$ to
+be
+\begin{eqnarray}
+E & \equiv & \gamma\, m\, c^2 \nonumber\\
+\tv{p} & \equiv & \gamma\, m\, \tv{v}
+\end{eqnarray}
+Please forget any other expressions you learned for $E$ or $\tv{p}$ in
+non-relativistic mechanics.  Those other expressions are only good
+when speeds are much smaller than the speed of light.
+
+A very useful equation suggested by the new, correct expressions for
+$E$ and $\tv{p}$ is
+\begin{equation}
+\tv{v} = \frac{\tv{p}\,c^2}{E}
+\end{equation}
+
+By taking the magnitude-squared of $\fv{p}$ we get a relation between
+$m$, $E$ and $p\equiv |\tv{p}|$,
+\begin{equation}
+|\fv{p}|^2 = m^2\, c^2 = \left(\frac{E}{c}\right)^2 - p^2
+\end{equation}
+which, after multiplication by $c^2$ and rearrangement becomes
+\begin{equation}
+E^2 = m^2\, c^4 + p^2\, c^2
+\end{equation}
+This is the famous equation of Einstein's, which becomes $E=m\,c^2$
+when the particle is at rest ($p=0$).\footnote{A friend of mine once
+was passed by a youth-filled automobile, the contents of which
+identified him as a physicist and shouted ``Hey nerd: $E=mc^2$!''
+What has just been discussed explains why he ran down the street after
+the automobile shouting ``Only in the rest frame!''}
+
+If we take the low-speed limits, we should be able to
+reconstruct the non-relativistic expressions for energy $E$ and
+momentum $\tv{p}$.  In the low-speed limit $\beta\equiv v/c\ll 1$, and
+we will make use of the fact that for small $\epsilon$,
+$(1+\epsilon)^n\approx 1+n\,\epsilon$.  At low speed,
+\begin{eqnarray}
+\tv{p} & = & m\,\tv{v}\, (1-\beta^2)^{-1/2} \nonumber\\
+& \approx & m\,v + \frac{1}{2}\,m\,\frac{v^2}{c^2}\,\tv{v} \nonumber\\
+& \approx & m\,\tv{v} \nonumber\\
+E & = & m\, c^2\, (1-\beta^2)^{-1/2} \nonumber\\
+& \approx & m\,c^2 + \frac{1}{2}\,m\,v^2
+\end{eqnarray}
+i.e., the momentum has the classical form, and the energy is just
+Einstein's famous $m\,c^2$ plus the classical kinetic energy
+$m\,v^2/2$.  But remember, these formulae only apply when $v\ll c$.
+
+Conservation of 4-momentum is just like conservation of 3-momentum in
+non-relativistic mechanics.  All the 4-momenta of all the components
+of the whole system under study are summed before the interaction, and
+they are summed afterwards.  No matter what the interaction, as long
+as the whole system has been taken into account (i.e.\ the system is
+{\em isolated\/}), the total 4-momentum $\fv{p}$ before must equal the
+total 4-momentum $\fv{q}$ after. In effect this single conservation
+law $\fv{p}=\fv{q}$ summarizes four individual conservation laws, one
+for each component of the 4-momentum.
+
+
+\section{Collisions}
+\label{sec:collisions}
+
+It is now time to put conservation of 4-momentum into use by solving
+some physics problems.  The essential technique is to sum up the total
+4-momentum before and total 4-momentum after and set them equal.  But
+just as in non-relativistic mechanics, there are tricks to learn and
+there are easy and difficult ways of approaching each problem.
+
+In non-relativistic mechanics, collisions divide into two classes:
+elastic and inelastic.  In elastic collisions, both energy and
+3-momentum are conserved.  In inelastic collisions, only 3-momentum is
+conserved.  Energy is not conserved because some of the initial
+kinetic energy of the bodies or particles gets lost to heat or
+internal degrees of freedom.  In relativistic mechanics, 4-momentum,
+and in particular the time component or energy, is conserved in {\em
+all\/} collisions; no distinction is made between elastic and
+inelastic collisions.  As we will see, this is because the {\em
+correct,\/} relativistic expression we now use for energy takes all
+these contributions into account.
+
+In Figure~\ref{fig:collision}, a ball of putty of mass $m$ is
+travelling at speed $v$ towards another ball of putty, also of mass
+$m$, which is at rest.  They collide and stick forming a new object
+with mass $M'$ travelling at speed $v'$.
+\begin{figure}
+\horfigure{collision.eps}
+\caption[Collision diagram]
+{(a)~A ball of putty of mass $m$ travels at speed $v$ towards an
+identical ball which is at rest.  (b)~After the collision the balls
+are stuck together and the combined lump has mass $M'$ and speed
+$v'$.}
+\label{fig:collision}
+\end{figure}
+In a non-relativistic world, $M'$ would be $2m$ and $v'$ would be
+$v/2$, a solution that conserves non-relativistic momentum but not
+non-relativistic energy; classically this collision is inelastic.  But
+in a relativistic world we find that the non-relativistic predictions
+for $v'$ and $M'$ are not correct and both energy and 3-momentum will
+be conserved.
+
+Before the collision, the 4-momentum of the moving ball is
+$\fv{p}_m=(\gamma\, m\, c,\gamma\, m\, v,0,0)$, where I have aligned
+the $x$-axis with the direction of motion, and of course
+$\gamma\equiv(1-v^2/c^2)^{-1/2}$.  The 4-momentum of the stationary
+ball is $\fv{p}_s=(m\, c,0,0,0)$, so the total 4-momentum of the
+system is
+\begin{equation}
+\fv{p}=\fv{p}_m+\fv{p}_s=([\gamma+1]\,m\,c,\gamma\,m\,v,0,0)
+\end{equation}
+After the collision, the total 4-momentum is simply
+\begin{equation}
+\fv{q}=(\gamma'\,M'\,c,\gamma'\,M'\,v',0,0)
+\end{equation}
+where $\gamma'\equiv(1-v'^2/c^2)^{-1/2}$.
+
+By conservation of 4-momentum, $\fv{q}=\fv{p}$, which means that the
+two 4-vectors are equal, component by component, or
+\begin{eqnarray}
+\gamma'\,M'\,c & = & [\gamma+1]\,m\,c \nonumber\\
+\gamma'\,M'\,v' & = & \gamma\,m\,v
+\end{eqnarray}
+The ratio of these two components should provide $v'/c$; we find
+\begin{equation}
+v' = \frac{\gamma\,v}{\gamma+1} > \frac{v}{2}
+\end{equation}
+The magnitude of $\fv{q}$ should be $M'\,c$; we find
+\begin{eqnarray}
+M'^2 & = & [\gamma+1]^2\,m^2 - \gamma^2\,m^2\,\frac{v^2}{c^2} \nonumber\\
+& = & \left[1 + 2\,\gamma + \gamma^2\,\left(1-\frac{v^2}{c^2}\right)\right]\,m^2 \nonumber\\
+& = & 2\,(\gamma+1)\,m^2 \nonumber\\
+M' & = & \sqrt{2\,(\gamma+1)}\,m \nonumber\\
+& > & 2\, m
+\end{eqnarray}
+So the non-relativistic answers are incorrect, and most disturbingly,
+the mass $M'$ of the final product is greater than the sum of the
+masses of its progenitors, $2\,m$.
+
+Where does the extra rest mass come from?  The answer is energy.  The
+collision is classically inelastic.  This means that some of the
+kinetic energy is lost.  But energy is conserved, so the energy is not
+actually lost, it is just converted into other forms, like heat in the
+putty, or rotational energy of the combined clump of putty, or in
+vibrational waves or sound traveling through the putty.  Strange as it
+may sound, this internal energy actually {\em increases the mass\/} of
+the product of the collision.
+
+The consequences of this are strange.  For example, a brick becomes
+more massive when one heats it up.  Or, a tourist becomes less massive
+as he or she burns calories climbing the steps of the Eiffel
+Tower.\footnote{Relativity does {\em not\/} provide the principal
+reason that one can lose weight by excercising; you do the math.}  Or,
+a spinning football hits a football player with more force than a
+non-spinning one.  All these statements are true, but it is important
+to remember that the effect is very very small unless the internal
+energy of the object in question is on the same order as $m\,c^2$.
+For a brick of $1~{\rm kg}$, that energy is $10^{20}$~Joules, or
+$3\times10^{13}$~kWh, or my household energy consumption over about
+ten billion years (roughly the age of the Universe).  For this reason,
+macroscopic objects (like bricks or balls of putty) cannot possibly be
+put into states of relativistic motion in Earth-bound experiments.
+Only subatomic and atomic particles can be accelerated to relativistic
+speeds, and even these require huge machines (accelerators) with huge
+power supplies.
+
+\begin{problem}
+Suppose the two balls of putty in Figure~\ref{fig:collision} do not
+hit exactly head-on but rather at a slight perpendicular displacement,
+so in the final state the combined lump is spinning?  How will this
+affect the final speed $v'$?  And the final mass $M'$?  Imagine now
+that you stop the combined lump from spinning---will its mass be
+greater than, equal to, or less than $M'$?
+\end{problem}
+
+
+\section{Photons and Compton scattering}
+\label{sec:compton}
+
+Can something have zero rest mass?  If we blindly substitute $m=0$
+into Einstein's equation $E^2=m^2\,c^4+p^2\,c^2$ we find that $E=p\,c$
+for a particle with zero rest mass (here $p$ is the magnitude of the
+3-momentum).  But $v=p\,c^2/E$, so such massless particles would
+always have to travel at $v=c$, the speed of light.  Strange.
+
+Of course photons, or particles of light, have zero rest mass, and
+this is ``why'' they always travel at the speed of light.  The
+magnitude of a photon's 4-momentum is zero, but this does not mean
+that the components are all zero; it just means that when the
+magnitude is calculated, the time component squared, $E^2/c^2$, is
+exactly cancelled out by the sum of the space components squared,
+$p_x^2+p_y^2+p_z^2=|\tv{p}|^2$.  Thus the photon may be massless, but
+it carries momentum and energy, and it should obey the law of
+conservation of 4-momentum.  This was beautifully predicted and tested
+in the famous Compton scattering experiment.  We outline the theory
+behind this experiment here.
+
+Figure~\ref{fig:compton} shows the schematic for Compton scattering.
+A photon of initial 3-momentum magnitude $Q$ (or energy $Qc$)
+approaches an electron of mass $m$ that is essentially at rest.  The
+photon scatters off of the electron, leaving at some angle $\theta$ to
+the original direction of motion, and with some new momentum $Q'$ (or
+energy $Q'c$).  The electron leaves at some other angle $\phi$ and
+some speed $v$.
+\begin{figure}
+\horfigure{compton.eps}
+\caption{Before and after pictures for Compton scattering.}
+\label{fig:compton}
+\end{figure}
+The idea of the experiment is to beam photons of known momentum $Q$ at
+a target of stationary electrons, and measure the momenta $Q'$ of the
+scattered photons as a function of scattering angle $\theta$.  We
+therefore want to derive an expression for $Q'$ as a function of
+$\theta$.
+
+Before the collision the 4-momenta of the photon and electron are
+\begin{equation}
+\fv{p}_{\gamma} = (Q,Q,0,0)\nonumber\\
+\end{equation}
+\begin{equation}
+\fv{p}_e = (m\,c,0,0,0)
+\end{equation}
+respectively, and after they are
+\begin{equation}
+\fv{q}_{\gamma} = (Q',Q'\,\cos\theta,Q'\,\sin\theta,0)
+\end{equation}
+\begin{equation}
+\fv{q}_e = (\gamma\,m\,c,\gamma\,m\,v\,\cos\phi,-\gamma\,m\,v\,\sin\phi,0)
+\end{equation}
+respectively, where we have aligned coordinates so the initial
+direction of the photon is the $x$-direction, and the scatter is in
+the $x$-$y$ plane.  The conservation law is
+\begin{equation}
+\fv{p}_{\gamma}+\fv{p}_e=\fv{q}_{\gamma}+\fv{q}_e
+\end{equation}
+but there is a trick.  We can move both the photon 4-momenta to one
+side and both the electron momenta to the other and square (where
+$\fv{a}^2$ is just $\fv{a}\cdot\fv{a}$):
+\begin{equation}
+(\fv{p}_{\gamma}-\fv{q}_{\gamma})^2 = (\fv{q}_e-\fv{p}_e)^2
+\end{equation}
+\begin{equation}
+\fv{p}_{\gamma}\cdot\fv{p}_{\gamma}
++ \fv{q}_{\gamma}\cdot\fv{q}_{\gamma}
+- 2\,\fv{p}_{\gamma}\cdot\fv{q}_{\gamma}
+= \fv{p}_e\cdot\fv{p}_e + \fv{q}_e\cdot\fv{q}_e
+- 2\,\fv{p}_e\cdot\fv{q}_e
+\end{equation}
+For all photons $\fv{p}\cdot\fv{p}=0$ and for all electrons
+$\fv{p}\cdot\fv{p}=m^2\,c^2$.  Also, in this case,
+$\fv{p}_{\gamma}\cdot\fv{q}_{\gamma}=Q\,Q'-Q\,Q'\,\cos\theta$ and
+$\fv{p}_e\cdot\fv{q}_e=\gamma\,m^2\,c^2$, so
+\begin{equation}
+- 2\,Q\,Q'\,(1-\cos\theta) = 2\,(1-\gamma)\,m^2\,c^2
+\end{equation}
+But by conservation of energy, $(\gamma-1)\,m\,c$ is just $Q-Q'$, and
+$(a-b)/ab$ is just $1/b-1/a$, so we have what we are looking for:
+\begin{equation}
+\frac{1}{Q'}-\frac{1}{Q} = \frac{1}{m\,c}\,(1-\cos\theta)
+\end{equation}
+
+This prediction of special relativity was confirmed in a beautiful
+experiment by Compton (1923) and has been reconfirmed many times
+since by undergraduates in physics lab courses.  In addition to
+providing quantitative confirmation of relativistic mechanics, this
+experimental result is a beautiful demonstration of the fact that
+photons, though massless, carry momentum and energy.
+
+Quantum mechanics tells us that the energy $E$ of a photon is related
+to its frequency $\nu$ by $E=h\,\nu$, and we know that for waves
+travelling at speed $c$, the frequency $\nu$ and wavelength $\lambda$
+are related by $\lambda=c/\nu$, so we can re-write the Compton
+scattering equation in its traditional form:
+\begin{equation}
+\lambda'-\lambda = \frac{h}{m\,c}\,(1-\cos\theta)
+\end{equation}
+
+% Problem: what is the maximum neutrino mass given SN 1987a?
+
+
+\section{Mass transport by photons}
+\label{sec:masstransport}
+
+Consider a box of length $L$ and mass $m$ at rest on a frictionless
+table.  If a photon of energy $E\ll m\,c^2$ is emitted from one end of
+the box (as shown in Figure~\ref{fig:photonmass}) and is absorbed by
+the other, what is the reaction of the box?
+\begin{figure}
+\horfigure{masstransport.eps}
+\caption[A demonstration that there is a mass associated with the
+energy in a photon]{A thought experiment to demonstrate that there is
+a mass $\mu=E/c^2$ associated with a photon of energy $E$.}
+\label{fig:photonmass}
+\end{figure}
+
+We know the previous section that a photon of energy $E$ carries
+momentum $E/c$, so to conserve momentum, the emission of the photon
+must cause the box to slide backwards at a speed $v$ given by
+$m\,v=-E/c$ (where it is okay to use the classical formula $m\,v$ for
+momentum because we stipulated $E\ll m\,c^2$ so $\gamma\ll 1$). The
+photon is absorbed a time $\Delta t$ later, and the box must stop
+moving (again to conserve momentum).  In time $\Delta t$, the box
+moves a distance
+\begin{equation}
+\Delta x_{\rm b} = v\,\Delta t = -\frac{E}{m\,c}\,\Delta t
+\end{equation}
+and then stops, while the photon moves a distance
+\begin{equation}
+\Delta x_{\rm p} = c\,\Delta t = L-\frac{E}{m\,c}\,\Delta t
+\end{equation}
+and then gets absorbed.  Because the forces associated with the
+emission and absorption of the photon are totally internal to be box,
+we do not expect them to be able to transport the center of mass of
+the box (see, e.g., Frautschi et al., 1986, Chapter~11 for a
+non-relativistic discussion of this---it is a consequence of
+conservation of momentum).  But because the box moved, the center of
+mass can only have remained at rest if the photon transported some
+mass $\mu$ from one end of the box to the other.  To preserve the
+center of mass, the ratio of masses, $\mu/m$ must be equal to the
+ratio of their displacements $\Delta x_{\rm b}/\Delta x_{\rm p}$, so
+\begin{equation}
+\mu = m\,\frac{\Delta x_{\rm b}}{\Delta x_{\rm p}}
+= \frac{E}{c^2}
+\end{equation}
+The transmission of the photon thus transports a mass $\mu=E/c^2$.
+
+This does not mean that the photon is massive.  The {\em rest mass\/}
+of a photon is zero.  It only shows that when a photon of energy $E$
+is emitted, the emitter loses mass $\Delta m=E/c^2$ and when it is
+absorbed the absorber gains mass $\Delta m=E/c^2$.
+
+\begin{problem}
+In Chapter~\ref{chap:causality} we learned that no signal can travel
+through a solid body at a speed faster than that of light.  The part
+of the box which absorbs the photon, therefore, won't know that a
+photon has been emitted from the other end until the photon actually
+arrives\footnote{I acknowledge French (1966) for pointing out this
+problem with the above argument.}!  Re-cast this argument for mass
+transport by photons into a form which does not rely on having a box
+at all.
+\end{problem}
+
+
+\section{Particle production and decay}
+\label{sec:decay}
+
+\begin{problem}
+A particle of mass $M$, at rest, decays into two smaller
+particles of masses $m_1$ and $m_2$.  What are their energies and
+momenta?
+\end{problem}
+
+Before decay, the 4-momentum is $(E/c,\tv{p})=(Mc,\tv{0})$.  After,
+the two particles must have equal and opposite 3-momenta $\tv{p}_1$
+and $\tv{p}_2$ in order to conserve 3-momentum.  Define $p\equiv
+|\tv{p}_1|=|\tv{p}_2|$; in order to conserve energy
+$E_1+E_2=E=M\,c^2$ or
+\begin{equation}
+\sqrt{p^2+m_1^2\,c^2}+\sqrt{p^2+m_2^2\,c^2}=M\,c
+\end{equation}
+This equation can be solved (perhaps numerically---it is a quartic)
+for $p$ and then $E_1=\sqrt{m_1^2c^4+p^2c^2}$ and
+$E_2=\sqrt{m_2^2c^4+p^2c^2}$.
+
+\begin{problem}
+Solve the above problem again for the case $m_2=0$.  Solve the
+equations for $p$ and $E_1$ and then take the limit $m_1\rightarrow
+0$.
+\end{problem}
+
+\begin{problem}
+If a massive particle decays into photons, explain using
+4-momenta why it cannot decay into a single photon, but must decay
+into two or more.  Does your explanation still hold if the particle is
+moving at high speed when it decays?
+\end{problem}
+
+\begin{problem}
+A particle of rest mass $M$, travelling at speed $v$ in the
+$x$-direction, decays into two photons, moving in the positive and
+negative $x$-direction relative to the original particle.  What are
+their energies?  What are the photon energies and directions if the
+photons are emitted in the positive and negative $y$-direction
+relative to the original particle (i.e., perpendicular to the
+direction of motion, in the particle's rest frame).
+\end{problem}
+
+
+\section{Velocity addition (revisited) and the Doppler shift}
+\label{sec:vadd2}
+
+The fact that the 4-momentum transforms according to the Lorentz
+transformation makes it very useful for deriving the velocity addition
+law we found in Section~\ref{sec:vadd}.  In frame $\rfr{S}$, a
+particle of mass $m$ moves in the $x$-direction at speed $v_1$, so its
+4-momentum is
+\begin{equation}
+\fv{p}=(\gamma_1\,m\,c, \gamma_1\,m\,v_1, 0, 0)
+\end{equation}
+where $\gamma_1\equiv (1-v_1^2/c^2)^{-1/2}$.  Now switch to a new
+frame $\rfr{S}'$ moving at speed $-v_2$ in the $x$-direction.  In this
+frame the 4-momentum is
+\begin{eqnarray}
+\fv{p}' & = &
+\left(\gamma_2\,\gamma_1\,m\,c +
+\frac{v_2}{c}\,\gamma_2\,\gamma_1\,m\,v_1,\right.
+\nonumber\\
+& & \left.\gamma_2\,\gamma_1\,m\,v_1 + \frac{v_2}{c}\,\gamma_2\,\gamma_1\,m\,c,
+0, 0\right)
+\end{eqnarray}
+The speed is just the ratio of $x$ and $t$-components, so
+\begin{eqnarray}
+\frac{v'}{c} & = & \frac{
+\gamma_2\,\gamma_1\,m\,v_1 + \gamma_2\,\gamma_1\,m\,v_2}{
+\gamma_2\,\gamma_1\,m\,c + \gamma_2\,\gamma_1\,m\,v_1\,v_2/c}
+\nonumber \\
+v' & = & \frac{v_1+v_2}{1+v_1\,v_2/c^2}
+\end{eqnarray}
+This is a much simpler derivation than that found in Section~\ref{sec:vadd}!
+
+Consider now a photon in $\rfr{S}$ with 4-momentum $\fv{q}=(Q,Q,0,0)$.
+In frame $\rfr{S}'$ the 4-momentum is
+\begin{equation}
+\fv{q}'=(\gamma_2\,Q+\frac{v_2}{c}\,\gamma_2\,Q,
+\gamma_2\,Q+\frac{v_2}{c}\,\gamma_2\,Q,0,0)
+\end{equation}
+Clearly this is still travelling at the speed of light (as it must)
+but now its new 3-momentum is
+\begin{equation}
+Q'=\gamma_2\,\left(1+\frac{v_2}{c}\right)\,Q=\sqrt{\frac{1+v_2}{1-v_2}}\,Q
+\end{equation}
+This change in momentum under a boost is the {\em Doppler shift,} and
+is discussed in more detail in the next Chapter.
+
+
+\section{4-force}
+\label{sec:4-force}
+
+We now have 4-velocity and 4-momentum, and we know how to use them.
+If we want to construct a complete, invariant dynamics, analogous to
+Newton's laws but valid in all reference frames, we are going to need
+4-acceleration and 4-force.  Recall that we defined a 4-vector to be a
+four component object that transforms according to the Lorentz
+transformation.  For this reason, the 4-velocity $\fv{u}$ and
+4-momentum $\fv{p}$ are defined in terms of derivatives with respect
+to proper time $\tau$ rather than coordinate time $t$.  The
+definitions are $\fv{u}\equiv d\fv{x}/d\tau$ and $\fv{p}\equiv
+m\fv{u}$, where $\fv{x}$ is spacetime position and $m$ is rest mass.
+
+For this same reason, if we want to define a 4-vector form of
+acceleration, the 4-acceleration $\fv{a}$, or a 4-vector force,
+4-force $\fv{K}$, we will need to use
+\begin{eqnarray}
+\fv{a} & \equiv & \frac{d\fv{u}}{d\tau} \\
+\fv{K} & \equiv & \frac{d\fv{p}}{d\tau}
+\end{eqnarray}
+Because $\fv{p}=(E,\tv{p})$, we have
+\begin{equation}
+\fv{K} = \left(\frac{dE}{d\tau},\frac{d\tv{p}}{d\tau}\right) \; .
+\end{equation}
+Because $\Delta t=\gamma\,\Delta\tau$ (where, as usual, $\gamma\equiv
+(1-v^2/c^2)^{-1/2}$), the spatial part of the 4-force is related to
+Newton's force $\tv{F}$, defined as $\tv{F}\equiv d\tv{p}/dt$, by
+\begin{equation}
+\frac{d\tv{p}}{d\tau} = \gamma\,\tv{F}
+\end{equation}
+Also, if the rest mass $m$ of the object in question is a constant
+(not true if the object in question is doing work, because then it
+must be using up some of its rest energy!), we have that
+\begin{eqnarray}
+\fv{p}\cdot\fv{p} & = & m^2\,c^2\nonumber\\
+\frac{d}{d\tau}(\fv{p}\cdot\fv{p}) & = & 0\nonumber\\
+\frac{d\fv{p}}{d\tau}\cdot\fv{p} + \fv{p}\cdot\frac{d\fv{p}}{d\tau}
+ & = & 0\nonumber\\
+\fv{p}\cdot\fv{K} & = & 0
+\end{eqnarray}
+i.e., if the rest mass is not changing then $\fv{p}$ and $\fv{K}$ are
+{\em orthogonal.\/}  In 3+1-dimensional spacetime, orthogonality is
+something quite different from orthogonality in 3-space: it has
+nothing to do with $90\degree$ angles.
+
+The 4-force is only brought up here to whet the reader's appetite.  We
+will actually have to make use of it in the (currently non-existent)
+Chapter on electricity.
+
+% Problem: uniformly accelerated astronaut.

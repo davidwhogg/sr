@@ -1,0 +1,560 @@
+\chapter{Electricity and magnetism}
+\label{chap:electricity}
+
+Special relativity was initially conceived by Einstein as a way to
+unify electricity and magnetism, so our treatment of the subject is
+historically backwards; we have only just now reached the {\em
+beginning\/} of the story.  Before Einstein's time, Maxwell had
+written down his beautiful equations relating the electric and
+magnetic fields $\tv{E}$ and $\tv{B}$ (reference ??).  Maxwell's
+equations showed incredible symmetry between $\tv{E}$ and $\tv{B}$,
+but the two fields remained physically distinct.  Hertz had shown that
+accelerating charges radiate waves in these fields, waves which travel
+at the speed of light (reference ??).  And Lorentz had noticed that
+the electric field of a rapidly-moving charge was flattened along the
+direction of motion relative to the spherical field produced by a
+static charge (reference ??).  Einstein's great accomplishment was to
+explain or at least unify electricity and magnetism, showing that the
+electric field requires a magnetic field counterpart if the speed of
+light in vacuum and all the laws of physics are the same in all
+uniformly moving reference frames.
+
+The goal of this chapter is to use special relativity and
+electrostatic laws to ``predict'' or demonstrate the existence and
+properties of the magnetic field.  Some knowledge of electrostatics is
+assumed, although not much.  Purcell (1985), Chapter~1, is recommended
+to any readers who feel a bit rusty or inexperienced with
+electrostatics.
+
+
+\section{Conservation and invariance of charge}
+
+Charge is {\em conserved.\/} That is, in any reaction, interaction, or
+collision, the sum of the charges of all the components {\em before\/}
+equals the sum of all charges of all the components {\em after.\/}
+Charge is also {\em invariant.\/} That is, every object has the same
+charge in all frames or for all observers.  Note that the first law,
+conservation, is a statement about physical processes whereas the
+second, invariance, is about reference frames.
+
+In support of charge conservation, the evidence comes in the form of the
+millions of collisions and scattering events observed in particle
+accelerators around the world; no violation of charge conservation has
+ever been observed.\footnote{Although a violation is predicted
+at??}
+
+Charge invariance can be argued in a very simple way with the
+principle of relativity.  The principle of relativity states that the
+fundamental physical constants and laws are the same for all observers
+in all inertial reference frames.  This must include the charge on the
+electron (or proton).  In addition, we cannot change the fact of an
+object's existence merely by changing frames.  Thus, neither the
+charges on the fundamental particles, nor the numbers of those
+particles can depend on reference frame.  The total charge on any
+object must be independent of reference frame.
+
+The above argument depends on the linearity of the equations of
+electromagnetism, which I will merely assert (it is discussed in
+detail in Purcell 1980), and it doesn't say anything about the
+electric field.  Just because the mathematical quantity obtained by
+multiplying the charge on an electron times the number of excess
+electrons in an object is frame-independent, it does not follow that
+the Gauss's law integral of electric flux through a closed surface
+enclosing the object is also frame-independent.  One extremely
+compelling reason to believe that it {\em is} frame-independent is the
+electric neutrality of (i.e. lack of long-range electric fields from)
+stationary atoms, in which the nucleus is at rest while the electrons
+move at speeds on the order of $10^{-2}\,c$.  This neutrality is known
+to hold to at least one part in ?? and it is independent of atomic
+motion.  Neither of these facts would hold if the Gauss's law electric
+flux integral was not proportional to charge, independent of reference
+frame.
+
+
+\section{The electric field}
+
+In a sense you were cheated in the previous section, because I did not
+tell you how charge is {\em defined.}  It is meaningless to say that
+charge is invariant and conserved if we do not say what it is!  The
+definition of charge is tied to the definition of the electric field,
+and the definition of the electric field is tied to the concept of
+charge.  Don't expect these notes to sort it all out.
+
+The following definition of the electric field $\tv{E}$ will be
+assumed in these notes.  If at some position a small test charge of
+charge $q$ which is {\em at rest\/} feels an electrostatic 3-force
+$\tv{F}$, the (3-vector) electric field $\tv{E}$ at that position is
+defined to be $\tv{E}\equiv \tv{F}/q$.  The requirement that the
+charge be at rest is important, because the magnetic field will cause
+forces that are proportional to speed.
+
+In the cgs system, the electric field of a point charge $Q$ is
+\begin{equation}
+\tv{E}=\frac{Q}{r^2}\,\hat{\tv{r}} \;\;,
+\end{equation}
+where $r$ is the distance from the charge, and $\hat{\tv{r}}$ is the
+radial unit 3-vector.  For more general situations the electric field
+can be computed using Gauss's law which relates the field $\tv{E}$ to
+the charge density $\rho$ (charge per unit volume)
+\begin{equation}
+\int_{\cal S} \tv{E}\cdot d\tv{a} = 4\pi\,\int_{\cal V} \rho\,dV
+= 4\pi\,Q_{\rm enclosed} \;\;,
+\end{equation}
+where the first integral is a surface integral of the electric flux
+through a closed surface $\cal S$ and the second integral is a volume
+integral which gives the total charge $Q_{\rm enclosed}$ inside the
+volume $\cal V$.  The differential form of Gauss's law is
+\begin{equation}
+\tv{\nabla}\cdot\tv{E} = 4\pi\,\rho \;\; ,
+\end{equation}
+where $\tv{\nabla}\cdot$ is the 3-vector divergence operator.
+
+Actually Gauss's law is the definition of charge.  That is, the charge
+$Q_{\rm enclosed}$ inside volume $\cal V$ is {\em defined\/} to be
+$1/(4\pi)$ times the electric flux through the bounding surface $\cal
+S$.\footnote{We defined $\tv{E}$ with force on a test charge, and
+charge with a surface integral of $\tv{E}$.  We are running in
+circles, but this is nothing new for us physicists.  Recall, for an
+example from elementary mechanics, Newton's second law
+$\tv{F}=m\,\tv{a}$.  This equation simultaneously defines the
+undefined quantities 3-force $\tv{F}$ and (inertial) mass $m$ in terms
+of one another.  Much worse, the equation is only true in certain
+reference frames, inertial ones, but an inertial frame is defined to
+be a frame in which the equation holds!  The amazing thing is that
+despite all this, the laws of physics do have predictive power.}  The
+flux integral must be performed at a particular time, that is the
+integral over the surface of $\tv{E}$ is the value of $\tv{E}$ at one
+particular time $t$.  The inferred charge is the charge contained
+inside the volume at that time $t$.
+
+
+\section{Boost transforming a pure electric field.}
+
+The simplest application of Gauss's law is the analysis of parallel
+plate capacitors; this and what we know about length contraction will
+teach us the first fact we need in constructing the magnetic field.
+Consider the parallel plate capacitor shown in
+Figure~\ref{fig:capacitor1}, at rest in the lab (unprimed) frame.  It
+is composed of two large plates of area $A$, carrying uniformly
+distributed charges $+Q$ and $-Q$.  The plates are separated by a
+small distance $h$.  Align coordinates so the plates are parallel to
+the $x$-$y$ plane.
+\begin{figure}
+\vspace{2in}
+\caption[A parallel plate capacitor at rest]{A parallel plate
+capacitor at rest in the lab frame, with the Gauss's law ``pillbox''
+surface used to calculate the electric field shown.}
+\label{fig:capacitor1}
+\end{figure}
+If the plates are much larger in extent than the distance between
+them, edge effects can be ignored.  In this approximation, symmetry
+requires that the electric field point in the $z$ direction, and that
+its magnitude depend only on $z$.  If a ``pillbox'' Gauss's law
+surface of cross-sectional area $a$ is placed so that it cuts through
+one plate as shown in Figure~\ref{fig:capacitor1}, it will contain
+total charge $q_{\rm enclosed}=a\,Q/A$, so a change in the magnitude
+of $\tv{E}$ of $4\pi\,Q/A$ is expected in going from one side of the
+plate to the other.  This argument does not depend on the height of
+the pillbox, so the electric field must be constant everywhere except
+for discontinuities of magnitude $4\pi\,Q/A$ at each plate.  The only
+solution which preserves the symmetry has $\tv{E}=\tv{0}$ outside and
+$\tv{E}=4\pi\,Q/A\,\hat{\tv{z}}$ inside, as shown in
+Figure~\ref{fig:capacitor2}.
+\begin{figure}
+\vspace{2in}
+\caption[The field of a parallel-plate capacitor]{The field of a
+parallel plate capacitor, in the approximation that edge effects can
+be ignored.}
+\label{fig:capacitor2}
+\end{figure}
+
+Now consider that same capacitor, but in the rocket (primed) frame,
+moving at speed $v$ in the $x$-direction.  By length contraction
+(Chapter~\ref{chap:time}) its $x$-length is shorter by a
+factor of $\gamma$ (recall that $\gamma\equiv (1-\beta^2)^{-1/2}$ and
+$\beta\equiv v/c$), while its $y$-length and $z$-height are
+unaffected.  So the area of the capacitor is $A'=A/\gamma$.  Gauss's
+law defines charge and charge is invariant, so the same method for
+calculating the electric field can be applied.  In the rocket frame,
+the field inside the capacitor is $\tv{E}'=4\pi\,Q/A'\,\hat{\tv{z}}'$
+which is a factor of $\gamma$ stronger than $\tv{E}$ in the lab frame.
+
+Now we can turn the experiment through $90\degrees$ and look at a
+parallel-plate capacitor at rest in the lab but with plates parallel
+to the $y$-$z$ plane (Figure~\ref{fig:capacitor3}).  The field inside
+is $\tv{E}=4\pi\,Q/A\,\hat{\tv{x}}$ in the lab frame.  In the rocket
+frame the distance between the plates is reduced by a factor of
+$\gamma$, but the area stays the same.  So $\tv{E}'=\tv{E}$; the
+electric field is the same in both frames.
+\begin{figure}
+\vspace{2in}
+\caption[A parallel plate capacitor at $90\degrees$]{A parallel plate
+capacitor (a)~at rest in the lab frame and (b)~moving in the rocket
+frame, but this time normal to the direction of motion.}
+\label{fig:capacitor3}
+\end{figure}
+
+We have derived transformation laws for the field of a parallel plate
+capacitor when that field is perpendicular to and parallel to the
+direction of motion.  What happens when we have a general electric
+field, not necessarily produced by parallel plates?  Because the
+relationship between charge and the electric field, Gauss's law, has
+the same form in all frames, any transformation of the electric field
+produced by one charge distribution must be valid for all charge
+distributions that could produce that electric field.  That is, the
+transformation properties of the field are independent of the source
+charge distribution.  This is required for the laws of
+electromagnetism to have the same form in all frames.
+
+
+\section{Electric field of a moving charge}
+
+Given these transformation laws for electric field parallel to and
+perpendicular to the direction of motion, it is possible to derive the
+electric field of an isolated moving charge.
+
+The electric field $\tv{E}$ of an electric point charge $Q$ at rest in
+frame $\rfr{S}$ is given by
+\begin{equation}
+\tv{E}=\frac{Q}{r^2}\,\hat{\tv{r}} \; ,
+\end{equation}
+where $r$ is the distance of the charge from the position in question
+and $\hat{\tv{r}}$ is the unit 3-vector which points radially away
+from the center of the charge, which can also be taken to be the
+center of the coordinate system.  At a point $(x,y,z)$ in cartesian
+coordinates the field has the form
+\begin{equation}
+\tv{E}= \frac{Q}{r^2}\,\hat{\tv{r}}
+      = \frac{Q\,x}{r^3}\,\hat{\tv{x}}
+      + \frac{Q\,y}{r^3}\,\hat{\tv{y}}
+      + \frac{Q\,z}{r^3}\,\hat{\tv{z}}
+\end{equation}
+Now switch to a frame $\rfr{S}'$ in which the charge is moving in the
+$z$-direction at speed $v=\beta c$, and consider the point in
+$\rfr{S}'$ corresponding to $(x,y,z)$ in $\rfr{S}$ at the moment
+$t'=0$ at which the charge is also at the center of the $\rfr{S}'$
+coordinate system.  The point corresponding to $(x,y,z)$ will be at
+$(x',y',z')=(x,y,z/\gamma)$ by length contraction, where, as usual,
+$\gamma\equiv (1-\beta^2)^{-1/2}$.  The magnitude of the
+$z'$-component of $\tv{E}'$ will be unaffected, but the $x'$- and
+$y'$-components will be increased by a factor of $\gamma$ so
+\begin{eqnarray}
+\tv{E}' & = & \frac{\gamma\,Q\,x}{r^3}\,\hat{\tv{x}}
+            + \frac{\gamma\,Q\,y}{r^3}\,\hat{\tv{y}}
+            + \frac{Q\,z}{r^3}\,\hat{\tv{z}} \nonumber\\
+        & = & \frac{\gamma\,Q\,x'}{r^3}\,\hat{\tv{x}}'
+            + \frac{\gamma\,Q\,y'}{r^3}\,\hat{\tv{y}}'
+            + \frac{\gamma\,Q\,z'}{r^3}\,\hat{\tv{z}}'
+\end{eqnarray}
+where $\tv{E}'$ has been left in an ugly form because it still makes
+use of $r$, the distance in frame $\rfr{S}$.
+\begin{eqnarray}
+r^2 &=& x^2+y^2+z^2 \nonumber\\
+    &=& x'^2+y'^2+\gamma^2\,z'^2 \nonumber\\
+    &=& r'^2\,\left[1+(\gamma^2-1)\,cos^2\theta'\right] \nonumber\\
+    &=& r'^2\,\gamma^2\,\left[1-\beta^2\,sin^2\theta'\right]
+\end{eqnarray}
+where $\theta'$ is the angle from the $z'$ axis so
+$z'/r'=\cos\theta'$.  Putting it together,
+\begin{equation}
+\tv{E}'= \frac{Q}{r'^2\,\gamma^2\,(1-\beta^2\,sin^2\theta')^{3/2}}\,\hat{\tv{r}}'
+\end{equation}
+There are several remarkable things about this expression.  The first
+is that the field is radial everywhere, i.e., it points directly away
+from the center of the charge.  Another is that the field is symmetric
+front--back.  Neither of these properties are directly required by
+either the laws of electromagnetism or those of special relativity.
+
+The reader may note that this derivation was somewhat ugly, making use
+of length contraction and a particular coordinate system.  My strong
+intuition is that there is a much more elegant derivation which makes
+use of the Maxwell tensor (introduced below), which, unlike the
+electric field \tv{E}, is a frame-independent, geometric object.
+
+
+\section{Force from a current-carrying wire}
+
+Einstein's principle of special relativity says that the laws of
+physics must be the same for all uniformly moving observers.  It turns
+out (as will be seen below) that when the invariance of charge is
+combined with our earlier special relativity results, we make
+different predictions for the electric forces on moving charges in
+different frames.  If relativity is to be saved, there needs to be a
+velocity-dependent force which compensates for this; it will turn out
+to be the {\em magnetic force,\/} and the truly invariant laws of
+electric charges are the laws of {\em electromagnetism,\/} not simply
+electricity.
+
+Consider a long, thin wire, stationary and parallel to the $x$-axis in
+frame $\cal{S}$, carrying current.  The wire contains a linear charge
+density $\lambda_e$ (charge per unit length) in electrons which are
+moving through the wire at mean speed $\beta_ec$, and a linear charge
+density $\lambda_i$ in ions which are stationary.  The wire is
+neutral, so the total linear charge density
+$\lambda=\lambda_i+\lambda_e=0$, but it does carry current $I$ (charge
+per unit time) equal to $\lambda_e\beta_ec$.  In this frame the charge
+feels no force from the wire because the wire is neutral and (as we
+will see) because the charge is stationary.
+
+Now consider a frame $\rfr{S}'$ moving at speed $v=\beta c$ in the
+$x$-direction relative to frame $\rfr{S}$.  In $\rfr{S}'$ the ions are
+moving at speed $\beta_i'c=-\beta c$ and, because of length
+contraction, have increased charge density
+$\lambda_i'=\gamma\lambda_i$, where $\gamma\equiv (1-\beta^2)^{-1/2}$.
+In $\rfr{S}'$ the electrons are moving at speed
+$\beta_e'c=(\beta_e-\beta)c/(1+\beta_e\beta)$ and, again because of
+length contraction, have linear charge density
+$\lambda_e'=\lambda_e\,\gamma_e'/\gamma_e$, where $\gamma_e\equiv
+(1-\beta_e^2)^{-1/2}$ and $\gamma_e'\equiv (1-\beta_e'^2)^{-1/2}$.  It
+is left as an exercise for the reader to show that
+$\gamma_e'=\gamma\gamma_e(1-\beta\beta_e)$.  The total charge density
+on the wire, $\lambda_i+\lambda_e$ is therefore not zero in
+$\rfr{S}'$, it is
+\begin{eqnarray}
+\lambda' & = & \lambda_i'+\lambda_e' \nonumber \\
+ & = & \gamma\,(\lambda_i+\lambda_e)
+       - \gamma\,\beta\,\beta_e\,\lambda_e \nonumber \\
+ & = & - \beta\,\frac{\gamma\,I}{c}
+\end{eqnarray}
+where in the last line the neutrality of the wire in $\rfr{S}$ and
+$I=\lambda_e\beta_ec$ have been used.  That is, a wire that is
+uncharged but carrying current in one frame will be charged in
+another.  This result does not stand in contradiction to the
+invariance of charge, it follows from it: the formulas for the
+$\lambda_i'$ and $\lambda_e'$ are derived by assuming the amount of
+charge is constant as the wire is length-contracted.
+
+Now consider the forces acting on a test charge $q$ which is at rest
+in frame $\rfr{S}'$ a distance $r$ from the wire.  It sees an electric
+field $E'=2\lambda'/r$ and feels a 3-force $F'=qE'$ in the radial
+direction.  In frame $\rfr{S}$, the charge is moving at speed
+$v=\beta\,c$ parallel to an uncharged, current-carrying wire.  If
+Einstein's postulate of special relativity is correct, i.e., the laws
+of physics are the same in all reference frames, then the charge must
+feel a radial force in this frame as well; i.e., currents cause forces
+on moving charges.  Putting it together, the force $F$ in on the
+moving charge in frame $\rfr{S}$ is
+\begin{eqnarray}
+F & = & \frac{F'}{\gamma} \nonumber \\
+  & = & - q\,\beta\,\frac{2\,I}{c\,r}
+\end{eqnarray}
+where we have used the relationship between force components
+perpendicular to the direction of the boost in different frames
+(Section~??).
+
+As for the direction of the force, consider the effects of the boost
+on the positive and negative linear charge densities in the wire.  For
+definiteness, imagine that the test charge is positive and moving in
+the same direction as the current in frame $\rfr{S}$, i.e., opposite
+to the direction the (negative) electrons are moving.  Boosting into
+frame $\rfr{S'}$, where the charge is at rest, we find that the
+positive linear charge density has increased by a factor of $\gamma$
+(by length contraction) while the negative linear charge density has
+changed by a factor $\gamma_e'/\gamma$, which is
+$\gamma(1-\beta\beta_e)$.  The negative linear charge density is
+increased more in this case because $\beta$ and $\beta_e$ have
+opposite signs.  So a positive charge is attracted to the wire when it
+moves in the same direction as the current.  A negative charge
+traveling in the same direction is repelled, as is a positive charge
+travelling in the opposite direction to the current.
+
+Before special relativity, these forces between currents and moving
+charges, called {\em magnetic\/} forces, were not seen as being
+directly related to electric forces.  Einstein's great achievement was
+to ``explain'' magnetic forces as simply electric forces in another
+frame of reference.
+
+\begin{problem}
+Show that $\gamma_e'=\gamma\gamma_e(1-\beta\beta_e)$ in the above
+discussion of the current-carrying wire.
+\end{problem}
+
+
+\section{Force between current-carrying wires}
+
+The first consequence of the forces from currents on moving charges is
+that current-carrying wires will exert forces on one another.
+Consider two parallel wires separated by a perpendicular distance $b$,
+carrying currents $I_1$ and $I_2$ in the same direction.  The wires
+are electrically neutral but contain charge densities $\lambda_1$ and
+$\lambda_2$ in electrons, moving at speeds $\beta_1\,c$ and
+$\beta_2\,c$.  The one wire will feel a force per unit length from the
+other
+\begin{eqnarray}
+\frac{dF_1}{d\ell} & = & \lambda_1\,\beta_1\,\frac{2\,I_2}{c\,b} \nonumber \\
+ & = & \frac{2\,I_1\,I_2}{c^2\,b}
+\end{eqnarray}
+and the force will be attractive.
+
+This force between current-carrying wires is actually used as the
+original definition of the SI unit of charge, the {\em Ampere.\/} A
+current of 1~A is the current which, when carried in opposite
+directions by two parallel wires of length and separation 1~m,
+produces a force between the wires of 1~N.  In SI units, a charge of
+1~Coulomb is defined to be an Ampere for a second or
+1~A\,s.\footnote{The attentive reader may notice that earlier it was
+written that charge was defined in terms of the electric field it
+produces, and now that charge is defined in terms of forces between
+current-carrying wires.  Is this inconsistent?  Not really, because we
+have derived the forces between current-carrying wires directly from
+special relativity and the electric fields of static charge
+distributions.}
+
+[Check if this is still the definition of an Ampere??]
+
+
+\section{The magnetic field}
+
+We have seen that the laws of electrostatics plus the laws of special
+relativity require velocity-dependent, magnetic forces. In this
+section, we derive more properties of magnetic forces, in terms of a
+very useful vector field, the {\em magnetic field.\/} The electric
+3-vector field $\tv{E}$ and magnetic 3-vector field $\tv{B}$ are
+defined\footnote{Oh no!  Another definition problem.  We defined the
+charge in terms of the fields and now the fields in terms of the force
+on a charge.  Is this inconsistent?  Not up to an overall scaling
+factor, which is set by the definition of current in terms of force.}
+in terms of the 3-force $\tv{F}$ on a test charge $q$ moving at
+3-velocity $\tv{v}$ by
+\begin{equation}
+\tv{F}=q\,\left[\tv{E}+\frac{\tv{v}\times\tv{B}}{c}\right]
+\end{equation}
+where ``$\times$'' denotes the cross or vector product.\footnote{For a
+refresher on vector operators, see ??}
+
+The definition of the magnetic field can be combined with the forces
+on a moving test charge near a current-carrying wire to get the field
+of a current-carrying wire.  A charge moving parallel to the current
+but below the wire is pulled upwards; a charge moving the same way but
+above is pulled down; on the left is pulled right and on the right is
+pulled left.  Therefore the magnetic field $\tv{B}$ must describe
+circles around the wire.  Given that the velocity and field vectors
+are perpendicular, the magnetic field $B(r)$ as a function of
+perpendicular distance $r$ from a long straight wire carrying current
+$I$ is
+\begin{equation}
+B=\frac{2\,I}{c\,r}
+\end{equation}
+The direction of the field is given by a ``right-hand''
+rule.\footnote{Those readers lacking right hands are advised to apply
+the equivalent ``left-hand'' rule and then apply a negative sign to
+their answers.}  If you curl the fingers of your right hand around the
+wire such that they point in the direction of the magnetic field, your
+thumb will point in the direction of the current.
+
+The fact that the magnetic field obeys a right-hand rule does not
+imply that the Universe has a handedness; it originates in the
+definition of the cross product.  If the cross product had been
+defined to use a left-hand rule, the magnetic field would also.
+
+\begin{problem}
+Use a symmetry argument to show that the magnetic field must describe
+circles around the wire rather than helixes.  Helixes would also
+satisfy the constraints from charges moving parallel to the current,
+so you will have to consider charges moving in directions other than
+those parallel to the wire.
+\end{problem}
+
+
+\section{Boost transforming electric and magnetic fields}
+
+In a boost transformation, as we shall see, the electric and magnetic
+fields ``mix'' in much the same way as time and space, or the
+components of a 4-vector.  Neither the electric nor magnetic fields
+are invariants, although there is a scalar combination of them which
+is an invariant.  The simplest description of the fields is in terms
+of a single second-rank tensor field, rather than two 3-vector fields,
+but that description is postponed to near the end of this chapter
+because it is somewhat difficult to construct initially.
+
+[Get magnetic field given electric.  Get electric given magnetic.
+Summarize and show that $E^2-B^2$ is invariant.]
+
+
+\section{The charge--current-density 4-vector}
+
+Charge is invariant and conserved.  Microscopically, charge
+conservation is ensured by the equations of particle physics.
+Macroscopically, charge conservation is ensured by a differential
+equation acting on $\rho$, the charge density, which is thought of as
+a field filling all of space.  The standard way to write the
+conservation is
+\begin{equation}
+\frac{\partial\rho}{\partial t}+\tv{\nabla}\cdot(\rho\,\tv{v})=0
+\end{equation}
+where the first term is the local rate of change in the charge density
+and the second term is the divergence of the flow of
+charge.\footnote{Again, for a refresher on vector operators, see ??}
+
+[Use the above to motivate the 4-d divergence and the
+charge--current-density 4-vector.  Show that the 4-vector is indeed a
+4-vector.]
+
+
+\section{The invariance of the laws of electromagnetism}
+
+Fiddle around to get the whole covariant picture.  Show that 4-force
+is the same in all frames.
+
+
+\section{The Maxwell tensor}
+
+Do it all again with the Maxwell tensor for advanced readers.
+
+
+\section{Field of an accelerated charge}
+
+To conclude this chapter we turn to a subject which is quite
+different, concerned with {\em changes\/} in the state of motion of a
+charge.  Imagine that a charge is moving past an observer along a
+straight path at constant speed.  The electric field measured by the
+observer, as we have learned, is not spherically symmetric, but is in
+fact compressed or contracted along the line of sight.  Now imagine
+that when the charge is one meter away from the observer, it suddenly
+comes to a halt for some reason (for instance imagine that it collides
+with something).  The earliest the observer can possibly learn about
+the halting is one meter of time {\em after\/} it actually comes to a
+halt.  After the information about the field (which is also carried by
+the field) gets to the observer, the observer will see the field of a
+charge which is stationary at the point at which the charge stopped.
+
+The above scenario goes as follows: At times $ct<0$, a charge $q$ is
+traveling along the $x$-axis in the positive direction at speed $v$.
+An observer sitting at rest at $x=z=0$ but $y=1$~m observes the field
+to be radial and directed towards the charge's {\em current\/}
+position, as was shown in Section~??.  At time $ct=0$ the charge
+suddenly stops at the origin.  At times $0<ct<1$~m, the charge is in
+fact at rest, but the observer doesn't know this; the observer
+observes the field continue to point radially towards the point at
+which the charge {\em would\/} be, had it not changed its state of
+motion.  Only at times $ct>1$~m has the information in the electric
+field about the stopping of the charge reached the observer; when
+$ct>1$~m the observer observes the field to be the spherically
+symmetric and pointing towards the origin.  At time $ct=1$~m, the
+observer experiences a rapid jump in electric field strength and
+direction (accompanied, as will be shown, by a spike or pulse in field
+strength).  The scenario is illustrated in Figure~??.
+
+[Insert figure here.]
+
+Why does Figure~?? show the electric field lines connected inside the
+thickness of the ``stopping horizon''?  Recall that the divergence of
+the electric field is equal to the charge density, by Gauss's law.
+This means that in any small volume inside the stopping horizon (or
+anywhere else except where the charge is), the field lines ``going
+in'' must also ``come out''.  The field lines only start and stop on
+charges.  The consequence is that field lines get bunched up inside
+the thickness of the stopping horizon.  Recall also that in the field
+line picture, the strength of the field is proportional to the density
+of the field lines.  The result is an electric field pulse inside the
+stopping horizon.  The observer sees the field of a moving charge,
+then a huge electric pulse and then the field of a stopped charge.
+
+The ambitious reader will note (and subsequently derive quantitative
+expressions for) several things about Figure~??.  One is that there is
+a great deal of field strength in the pulse in the directions
+perpendicular to the original direction of motion, and very little
+along and opposite to the original direction of motion.  Another is
+that although the field strength in the pulse decreases as the radius
+of the horizon expands, it does not decrease as rapidly as $1/r^2$,
+the radial dependence of the field from a uniformly moving charge.

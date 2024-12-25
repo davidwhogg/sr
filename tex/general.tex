@@ -1,0 +1,187 @@
+\chapter{Generalization to general relativity}
+\label{chap:general}
+
+This chapter does not rely heavily on the material in the previous
+three chapters (mechanics, apparent effects, and electromagnetism),
+except in one or two places.
+
+Recall Einstein's principle of relativity: the laws of physics (and in
+particular the speed of light) should be the same for all observers.
+In Section~\ref{sec:approximations} we restricted this principle to
+only those observers in ``freely falling'' reference frames;
+i.e. weightless observers or observers who experience no gravity.
+This restriction gives special relativity the ``special.''  Einstein
+sought to include all observers in a more general theory, and this
+effort resulted in {\em general relativity,\/} one of the most
+beautiful theories in modern physics.  Although general relativity
+goes far beyond the scope of this tiny chapter, it is possible, by the
+use of simple thought experiments, to derive some of the elementary
+results.
+
+
+\section{Einstein's principle of equivalence}
+
+In constructing his general theory of relativity, Einstein sought to
+make fundamental an apparent coincidence which appears in Newton's
+theory of gravity.\footnote{The reasoning is set out quite simply in
+Einstein (1911).}  In Newton's system, the acceleration $\tv{a}$ of a
+body is proportional to the force $\tv{F}$ acting upon it, with the
+mass $m$ the constant of proportionality, i.e., $\tv{F}=m\,\tv{a}$.
+Technically, in this context, $m$ is the {\em inertial mass,\/} the
+quantity responsible for ``resisting acceleration.''  In a
+gravitational field $\tv{g}$, the gravitational force $\tv{F}_g$
+acting on a body is $m\,\tv{g}$.  In this context, $m$ is the {\em
+gravitational mass,\/} the quantity responsible for ``producing''
+gravitational force.  The ``coincidence'' of the inertial mass
+equalling the gravitational mass for all objects has the simple result
+that every free body in the gravitational field undergoes precisely
+the same acceleration.  Einstein was unsatisfied by the coincidence
+explanation and sought to raise this observed symmetry up to a
+fundamental postulate of physics.
+
+Einstein suggested the {\em equivalence principle:\/} there is no
+local experiment\ldots
+
+
+\section{Gravitational deflection of light}
+
+It is simple to show that an observer standing in a gravitational
+field will see light travel not on straight paths (in the Euclidean
+sense) but on curved ones, as if light feels gravitational attraction.
+
+
+\section{Gravitational redshift}
+
+Photons lose energy as they climb out of a gravitational potential
+well.  That is, they become lower-frequency or longer-wavelength or
+are shifted to the red.  There are two simple arguments to show this.
+
+The first is very simple but relies on the equivalence of mass and
+energy as described in Section~\ref{sec:masstransport}.\footnote{I
+believe that this argument was first put forward by Einstein (1911).}
+Imagine that we have two ideal machines.  One, the {\em photon
+absorber,\/} absorbs photons and converts each photon's energy $E$
+into mass, creating a particle of mass $m=E/c^2$.  The other, the {\em
+photon emitter\/} absorbs massive particles and converts each
+particle's total energy $E$ (rest mass energy plus kinetic energy)
+into a photon of the same total energy, which is emitted.  Although no
+such machines exist yet, it is at least physically possible for such
+mechanical devices to have behaviours approaching those of the ideal
+machines.
+
+\begin{figure}
+\vspace{2in}
+\caption[An experiment to demonstrate gravitational redshift]{}
+\label{fig:tower}
+\end{figure}
+Now consider a tall diving tower of height $h$ on the surface of the
+Earth, where the gravitational field has strength $g$.  Place the
+photon absorber at the top of the tower and the photon emitter at the
+bottom, as shown in Figure~\ref{fig:tower}.  Begin by having the
+photon emitter emit a photon of energy $E_0$, in the direction of the
+absorber.  Imagine, contra reality, that the photon makes it up to the
+absorber with no reduction in energy.  At the top the photon is
+converted into a particle of mass $m=E_0/c^2$.  The particle is
+dropped back down to the emitter, when it lands it has kinetic energy
+$m\,g\,h$ because it has fallen through gravitational potential
+difference $g\,h$.  On landing, the particle has total energy
+\begin{equation}
+E_1 = m\,c^2 + m\,g\,h = E_0\,\left(1+\frac{g\,h}{c^2}\right) \;.
+\end{equation}
+The photon emitter converts this particle into a photon of energy
+$E_1$ which travels back up to the absorber.  The absorber drops a new
+particle of mass $E_1/c^2$ which lands with energy
+\begin{equation}
+E_2 = E_1\,\left(1+\frac{g\,h}{c^2}\right)
+= E_0\,\left(1+\frac{g\,h}{c^2}\right)^2 \;.
+\end{equation}
+Clearly, although there is no energy input to the machines, the
+energies of the photons keep increasing.  This violates conservation
+of energy.
+
+Conservation of energy can only be respected if the photon emitted
+with energy $E_0$ is absorbed at the top of the tower with energy
+\begin{equation}
+E_{\rm abs} = \frac{E_0}{1+gh/c^2} \;,
+\end{equation}
+that is photons must lose energy as they climb out of the
+gravitational potential well.  In general, if the photon travels up
+through a gravitational potential difference $\Delta\Phi$ from when it
+is emitted with energy $E_{\rm em}$ to when it is absorbed, it will be
+absorbed with energy
+\begin{equation}
+E_{\rm abs} = \frac{E_{\rm em}}{1+\Delta\Phi/c^2}
+\end{equation}
+In Section~\ref{sec:redshift}, we introduced redshift $z$ by an
+equation of the form
+\begin{equation}
+E_{\rm abs} = \frac{E_{\rm em}}{1+z} \;,
+\end{equation}
+so the redshift produced in a photon travelling through gravitational
+potential difference $\Delta\Phi$ is $z=\Delta\Phi/c^2$.  Just like
+the kinematic redshift, this gravitational redshift affects frequency,
+so $\nu_{\rm abs}=\nu_{\rm em}/(1+z)$, and wavelength, so
+$\lambda_{\rm abs}=(1+z)\,\lambda_{\rm em}$.  An interesting
+consequence is that two observers, at rest with respect to one another
+but at different heights in a gravitational potential will observe
+each others' clocks to run at a different speed than their own.  The
+lower observer sees the upper's clock running fast, or blueshifted, and
+the upper sees the lower's clock running slow, or redshifted.
+
+The second argument for gravitational redshift is more difficult but
+does not depend on the equivalence of mass and energy or the mass
+transport of photons.  Recall that the laws of special relativity only
+strictly hold for freely falling reference frames and consider two
+such frames.  The first, $\rfr{S}$, is a freely falling frame which is
+instantaneously at rest with an observer at the bottom of a diving
+tower at the exact moment that he or she emits a photon.  The second,
+$\rfr{S}'$, is a freely falling frame which is instantaneously at rest
+with an observer at the top of the tower at the exact moment at which
+he or she receives the photon.  The frames are both freely falling,
+but they are at rest with respect to the two observers (and hence the
+tower and the Earth) at different times.  $\rfr{S}$ is at rest with
+respect to the Earth at the time of emission and $\rfr{S}'$ at
+reception, a time $h/c$ later.  In that time, $\rfr{S}$ has acquired a
+downward speed relative to the Earth of $g\,h/c$ and is therefore
+moving relative to $\rfr{S}'$ at speed $g\,h/c$.  Special relativity
+holds in these freely-falling frames, and special relativity tells us
+that a signal beamed from one observer to another will be received
+with a redshift or blueshift depending on their relative speeds
+(Section~\ref{sec:redshift}), in the limit of small $v$, in this case
+small $h$, the redshift is $z\approx v/c$ or in this case $z\approx
+g\,h/c^2$.  When this problem is done correctly, including all the
+time dilation and length contraction that is involved, the exact
+answer comes out $z=\Delta\Phi/c^2$.
+
+In 19??, ?? performed an incredibly sensitive experiment which
+successfully measured the gravitational redshift\ldots
+
+Gravitational redshift is also detected in the emission from near the
+surface of compact, massive objects such as white dwarf stars\ldots
+
+
+\section{Problems with Newton's gravity}
+
+Potential $\Phi$ is $G\,M\,m/r$, but what distance $r$ do you use?
+The length $r$ is not a scalar.  At what time do you evaluate $\Phi$,
+which depends on the spatial distribution of matter do you use?  Do
+you need a retarded potential?
+
+Also, there is this puzzle about the inertial and gravitational mass.
+Why are they so similar, when there is no reason within Newton's
+theory of gravity itself to suggest this equivalence.
+
+
+\section{Freely falling reference frames}
+
+A reminder that SR only truly holds in freely falling reference
+frames.  Throw a ball while standing on the Earth, throw one while
+falling from a diving tower.  In the former case the ball travels on a
+curved path, a parabola.  In the latter case the trajectory is a
+straight line.
+
+
+\section{The metric and curved spacetime}
+
+For advanced or enthusiastic readers.
+

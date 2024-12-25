@@ -1,0 +1,523 @@
+\chapter{Optics and apparent effects: special relativity applied to
+astronomy}
+\label{chap:astronomy}
+\markboth{\MakeUppercase{Chapter~\thechapter.~~Optics and apparent effects}}{}
+
+Up to now, we have always stipulated that observers making
+measurements are endowed with divine knowledge and excellent data
+analysis skills (recall Section~\ref{sec:observing}).  For example, in
+Chapter~\ref{chap:time}, when E measured the rate of D's clock, she
+did not simply measure the time between light pulses she received, she
+corrected them for their light-travel times in getting from D's clock
+to her eyes.  The corrections E made to the arrival times were only
+possible because E was informed of D's trajectory before the
+experiment.  Unfortunately, in many experiments, we do not know in
+advance the trajectories of the objects we are studying.  This is
+especially true in astronomy, a subject which, among other things,
+attempts to reconstruct a 3+1-dimensional history of the Universe from
+a set of 2-dimensional telescope pictures which span a very brief
+duration in time (in comparison with the age of the Galaxy or
+Universe).
+
+In this chapter we discuss the appearance of objects to real
+observers.
+
+
+\section{Doppler shift (revisited)}
+\label{sec:redshift}
+
+Consider an object moving with respect to the Earth and which we are
+observing from Earth.  Without loss of generality, we can choose the
+coordinate system for the Earth's rest frame that puts the Earth at
+the spatial origin, the moving object a distance $D$ away on the
+positive $x$-axis, and puts the object's trajectory in the $x$-$y$
+plane.  Its velocity vector $\tv{v}$ makes an angle $\theta$ with the
+line of sight, as shown in Figure~\ref{fig:redshift}.
+\begin{figure}
+\horfigure{redshift.eps}
+\caption[Object moving quickly with respect to the Earth]{An object
+moving at relativistic velocity $\tv{v}$ with respect to the Earth
+(symbolized by ``$\oplus$'') at an angle $\theta$ to the line of
+sight.  Note that this is a diagram of space rather than spacetime.}
+\label{fig:redshift}
+\end{figure}
+
+Let us imagine that the moving object emits pulses of light at
+intervals of proper time $\Delta\tau_e$, and that its distance from us
+$D$ is much greater than $c\,\Delta\tau_e$.  The question
+we want to answer is this: If the light pulse emitted at time $0$
+arrives at Earth at time $t=D/c$, how much later does the next pulse
+arrive?
+
+The next pulse is emitted a time $\Delta t_e=\gamma\,\Delta\tau_e$,
+later (where $\gamma\equiv(1-\beta^2)^{-1/2}$, $\beta\equiv v/c$, and
+$v\equiv |\tv{v}|$), at which time the object is $\Delta x=v\,\Delta
+t_e\,\cos\theta$ further away, so the flash takes additional time
+$\Delta x/c$ to get to us.  The time interval $\Delta t_r$ between
+reception of the flashes is therefore
+\begin{eqnarray}
+\Delta t_r & = & \Delta t_e + \frac{v}{c}\,\Delta t_e\,\cos\theta \nonumber\\
+& = & (1 + \beta\,\cos\theta)\,\gamma\,\Delta\tau_e \; .
+\end{eqnarray}
+If the motion is basically away from the Earth ($\theta<\pi$), the
+time interval $\Delta t_r$ is longer than $\Delta\tau_e$.  The
+analysis still holds if we take the two events not to be flashes, but
+successive crests of an electromagnetic wave coming from the object.
+The observed period is longer than the rest-frame period; the
+observed frequency is lower than the rest-frame frequency; the
+light is shifted to the red.
+
+It is customary in astronomy to define a dimensionless {\em
+redshift\/} $z$ by
+\begin{eqnarray}
+(1+z) & \equiv & \frac{\Delta t_r}{\Delta\tau_e} \nonumber\\
+& = & \gamma\,(1+\beta\,\cos\theta) \; .
+\end{eqnarray}
+In the simple case $\theta=0$ (radial motion) the redshift is given by
+\begin{equation}
+(1+z) = \gamma\,(1+\beta) = \sqrt{\frac{1+\beta}{1-\beta}} \; ,
+\end{equation}
+and when $\theta=\pi$ (inward radial motion) the redshift $z$ is
+{\em negative,\/} we call it a {\em blueshift\/} and it is given by
+\begin{equation}
+(1+z) = \gamma\,(1-\beta) = \sqrt{\frac{1-\beta}{1+\beta}} \; .
+\end{equation}
+
+Even when the motion is perfectly tangential, $\theta=\pi/2$, there is
+a redshift which originates solely in the $\gamma$ factor.  This is
+known as the {\em second-order\/} redshift and it has been observed in
+extremely precise timing of high-velocity pulsars in the Galaxy.  Of
+course all of these redshift effects are observed and have to be
+corrected-for in tracking and communication between artificial
+satellites.
+
+Interestingly, the Doppler shift computed here, for the ratio of time
+intervals between photon arrivals in two different frames, is just the
+reciprocal of the Doppler shift formula computed in
+Section~\ref{sec:vadd2}, for the ratio of photon energies in two
+different frames.  In quantum mechanics, the energy of a photon is
+proportional to the frequency of light, which is the reciprocal of the
+time interval between arrivals of successive wave crests.  Quantum
+mechanics and special relativity would be inconsistent if we did not
+find the same formula for these two ratios.  Does this mean that
+special relativity requires that a photon's energy be proportional to
+its frequency?
+
+\begin{problem}
+The {\rm [O\,{\sc ii}]} emission line with rest-frame wavelength
+$\lambda_0=3727\,\mbox{\AA}$ is observed in a distant galaxy to be at
+$\lambda=9500\,\mbox{\AA}$.  What is the redshift $z$ and recession
+speed $\beta$ of the galaxy?
+\end{problem}
+
+Light travels at speed $c$, so the observed wavelength $\lambda$ is
+related to the observed period $T$ by $c\,T=\lambda$.  The rest-frame
+wavelength $\lambda_0$ is related to the rest frame period $\tau$ by
+$c\,\tau=\lambda_0$.  So
+\begin{equation}
+(1+z) \equiv \frac{T}{\tau} = \frac{\lambda}{\lambda_0}
+ = \frac{9500\,\mbox{\AA}}{3727\,\mbox{\AA}} \; ;
+\end{equation}
+$z = 1.55$.  Assuming the velocity is radial,
+\begin{eqnarray}
+(1+z) & = & \sqrt{\frac{1+\beta}{1-\beta}} \nonumber\\
+(1+z)^2-\beta\, (1+z)^2 & = & 1+\beta \nonumber\\
+\beta & = & \frac{(1+z)^2-1}{(1+z)^2+1} \; ,
+\end{eqnarray}
+in this case we get $\beta=0.73$.  The galaxy is receding from us at
+$0.73c$.
+
+
+\section{Stellar Aberration}
+\label{sec:aberration}
+
+Imagine two observers, Ursula (U) and Virginia (V), both at the same
+place, observing the same star, at the same time, but with V moving in
+the $x$-direction at speed $v$ relative to U.  In U's frame, the star
+is a distance $r$ away and at an elevation angle $\theta$ with respect
+to the $x$-axis.  Light travels at speed $c$, so for any photon coming
+from the star, the 4-displacement $\Delta\fv{x}$ between the event of
+emission $E$ and observation $O$ in U's frame is
+\begin{eqnarray}
+\Delta\fv{x} & = & (c\Delta t,\Delta x,\Delta y,\Delta z)\nonumber\\
+& = & (-r,r\,\cos\theta ,r\,\sin\theta ,0)
+\end{eqnarray}
+where the time component is negative because emission happens before
+observation.  We apply the Lorentz transformation to get the
+components in V's frame
+\begin{eqnarray}
+\Delta\fv{x} & = & (c\Delta t',\Delta x',\Delta y',\Delta z')\nonumber\\
+& = & (-\gamma\,r-\gamma\,\beta\,r\,\cos\theta ,
+\gamma\,r\,\cos\theta+\gamma\,\beta\,r ,r\,\sin\theta ,0)\nonumber\\
+\end{eqnarray}
+where, as usual, $\beta\equiv v/c$ and
+$\gamma\equiv(1-v^2/c^2)^{-1/2}$.  Since the photons also travel at
+speed $c$ in V's frame, we can re-write this in terms of the distance
+$r'$ to the star and elevation angle $\theta'$ in V's frame:
+\begin{equation}
+\Delta\fv{x}=(-r',r'\,\cos\theta' ,r'\,\sin\theta' ,0)
+\end{equation}
+Solving for $\theta'$,
+\begin{equation}
+\cos\theta'=\frac{\cos\theta +\beta}{1+\beta\,\cos\theta}
+\end{equation}
+i.e., V observes the star to be at a different angular position than
+that at which U does, and the new position does not depend on the
+distance to the star.
+
+This effect is {\em stellar aberration\/} and it causes the positions
+on the sky of celestial bodies to change as the Earth orbits the
+Sun.\footnote{Do not confuse this effect with parallax, which also
+causes the positions to change, but in a manner which depends on
+distance.}  The Earth's orbital velocity is $\sim30~{\rm km\,s^{-1}}$
+($\beta=10^{-4}$), so the displacement of an object along a line of
+sight perpendicular to the plane of the orbit (i.e., $\cos\theta=0$)
+is on the order of $10^{-4}$ radians or $\sim 20$~arcseconds, a small
+angle even in today's telescopes.  Despite this, the effect was first
+observed in a beautiful experiment by Bradley in 1729.\footnote{The
+paper is Bradley (1729); an excellent description and history of the
+experiment is Shankland (1964).}
+
+Notice that as the speed $v$ is increased, the stars are displaced
+further and further towards the direction of motion.  If U is inside a
+uniform cloud of stars and at rest with respect to them, V will see a
+non-uniform distribution, with a higher density of stars in the
+direction of her motion relative to the star cloud and a lower density
+in the opposite direction.
+
+
+\section{Superluminal motion}
+\label{sec:superluminal}
+
+It is observed that two components of the radio galaxy 3C~273 are
+moving apart at $\mu=0.8$~milliarcseconds per year (Pearson et al
+1981; recall that a milliarcsecond is $1/1000$ of $1/3600$ of a
+degree).  From the known rate of expansion of the Universe and the
+redshift of the radio galaxy, its distance\footnote{In cosmology,
+there are many different ways of defining the ``distance'' betweeen
+two objects, reviewed by Weinberg (1972, Chapter~14).  The ``proper
+motion distance'' is used in this context.} $D$ from the Milky Way
+(our own galaxy) has been determined to be $2.6\times 10^{9}$~light
+years (a light year is the distance light travels in one year).  If we
+multiply $\mu$ by $D$ we get the tangential component of the relative
+velocity of the two components.  Because there can also be a radial
+component, the velocity component we derive will be a lower limit on
+the speed of the object.  Converting to radians we find $\mu=4\times
+10^{-9}$~radians per year, so the tangential component of the velocity
+is roughly $10$~light years per year!  This is faster than twice the
+speed of light, the maximum relative speed at which we should ever
+observe two objects to move.  Relative speeds exceeding $2c$ have now
+been observed in many radio galaxies, and recently even in a jet of
+material flowing out of a star in our own galaxy (Hjellming \& Rupen
+1995); the effect has been dubbed {\em superluminal motion.\/} Is
+relativity wrong and can things really exceed the speed of light?
+
+Figure~\ref{fig:slm} depicts an object moving at a relativistic speed
+$v=|\tv{v}|$ at an angle $\theta$ to the line of sight.  The object is
+nearly moving directly towards the Earth, so $\theta$ is close to
+$\pi$~radians or $180\degrees$.  The object emits flashes at events
+$A$ and $B$, which are separated in time by $\Delta t_e$ in the
+Earth's rest frame.  The distance between the events is much smaller
+than the distance $D$ of the object from the Earth.
+\begin{figure}
+\horfigure{slm.eps}
+\caption[Object moving quickly, nearly towards the Earth.]{An object
+moving at relativistic velocity $\tv{v}$ on a trajectory that is
+nearly straight towards the Earth.  The object emits flashes at points
+$A$ and $B$.}
+\label{fig:slm}
+\end{figure}
+
+What is the time interval $\Delta t_r$ between the receptions of the
+two flashes at the Earth?  Flash $A$ takes time $D/c$ to get to us,
+but flash $B$ takes only $D/c+(v\,\Delta t_e\,\cos\theta)/c$ to get to
+us because the object is closer (note that $\cos\theta$ is negative).
+So
+\begin{equation}
+\Delta t_r = \Delta t_e + \beta\,\Delta t_e\,\cos\theta \; ,
+\end{equation}
+where $\beta\equiv v/c$.  The tangential separation of events $A$ and
+$B$ as seen from the Earth is $\Delta y = v\,\Delta t_e\,\sin\theta$,
+so the inferred tangential velocity component is
+\begin{equation}
+v_{\rm inferred} = \frac{\Delta y}{\Delta t_r}
+= \frac{\beta\,\sin\theta}{1+\beta\,\cos\theta}\,c \; ,
+\end{equation}
+which can be much bigger than $c$ if $\beta\approx 1$ and
+$\cos\theta\approx -1$.
+
+(It is worthy of note that there are many other possible explanations
+for observed superluminal motions.  If the radio galaxy contains a
+huge ``searchlight'' that sweeps its beam across intergalactic
+material, the speed of the patch of illumination can certainly exceed
+the speed of light.  Galaxies can act as gravitational ``lenses''
+which distort and magnify background objects; this magnification can
+make slowly-moving objects appear superluminal.  The moving patches
+could be foreground objects, although this now appears {\em very\/}
+unlikely.)
+
+\begin{problem}
+What is the minimum possible value of $\beta$ that could account
+for the observed proper motion in 3C~273?  Assume that one component is
+not moving tangentially with respect to the Earth and the other is.
+\end{problem}
+
+
+\section{Relativistic beaming}
+\label{sec:beaming}
+
+Consider an object emitting photons in all directions isotropically.
+The {\em brightness\/} of the object is proportional to the amount of
+radiation (energy per unit time) which the object emits into the pupil
+of the observer's eye or telescope, and inversely proportional to the
+solid angle (angular area, measured in square arcseconds, square
+degrees, or steradians) occupied by the object.  The dimensions of
+brightness are energy per unit time per unit solid angle.  Thus if two
+objects emit the same amount of light, the more compact one is
+brighter.  Brightness is a useful quantity in astronomy because it is
+independent of distance: as a lightbulb is moved away from an
+observer, the amount of light from the bulb entering the observer's
+eye or telescope goes down as the inverse square of the distance, but
+the solid angular size of the bulb also goes down as the inverse
+square of the distance.  The brightness is constant.
+
+Okay, the brightness of an object is independent of distance, but how
+does it depend on how the object is {\em moving\/} relative to the
+observer?  Doppler shift (Sections~\ref{sec:vadd2}
+and~\ref{sec:redshift}) affects both the energy $E$ (or momentum $Q$)
+of the photons and the rate of production $\Gamma$ of the photons
+(i.e., number of photons emitted per unit time).  In addition, the
+photon {\em directions\/} are different for the observer than for
+someone in the rest frame of the object (as in stellar aberation,
+Section~\ref{sec:aberration}), so the fraction of emitted photons
+entering the observer's eye or telescope will also be affected by the
+object's speed and direction.  For the same reason that in stellar
+aberration (Section~\ref{sec:aberration}) observed star positions are
+shifted into the direction of motion of the observer, emitted photons
+are ``beamed'' into the direction of motion of the emitter.
+
+Say the emitting object is at rest in frame $\rfr{S}'$, the rest
+frame, but moving at speed $v=\beta c$ in the positive $x$-direction
+in frame $\rfr{S}$, the frame of the observer.  In its rest frame, the
+object emits photons of energy $E'=Q'c$ at rate $\Gamma'$ (photons per
+unit time).  A photon emitted in a direction $\theta'$ relative to the
+$x$-axis in frame $\rfr{S}'$ has 4-momentum
+\begin{equation}
+\fv{p}=(Q',Q'\,\cos\theta',Q'\,\sin\theta',0)
+\end{equation}
+where the $y$-direction has been chosen to make $p_z=0$
+(Section~\ref{sec:compton}).  In frame $\rfr{S}$ it will have some
+different momentum $Q$ and angle $\theta$ and the 4-momentum will be
+\begin{equation}
+\fv{p}=(Q,Q\,\cos\theta,Q\,\sin\theta,0)
+\end{equation}
+but it must be related to the 4-momentum in $\rfr{S}'$ by the Lorentz
+transformation, so
+\begin{eqnarray}
+Q' & = & \gamma\,Q-\gamma\,\beta\,Q\,\cos\theta \nonumber \\
+Q'\,\cos\theta' & = & \gamma\,Q\,\cos\theta-\gamma\,\beta\,Q
+\end{eqnarray}
+The first equation is just the Doppler shift (Sections~\ref{sec:vadd}
+and~\ref{sec:redshift}); the ratio gives
+\begin{equation}
+\label{eqn:aber}
+\cos\theta' = \frac{cos\theta-\beta}{1-\beta\,\cos\theta}
+\end{equation}
+which is exactly the same as the stellar aberration equation
+(Section~\ref{sec:aberration}).
+
+In the rest frame $\rfr{S}'$ the object emits isotropically, so the
+rate per unit solid angle $\Omega$ (measured in steradians, or
+radians$^2$) is just
+\begin{equation}
+\frac{d\Gamma'}{d\Omega'}=\frac{\Gamma'}{4\pi}
+\end{equation}
+which is independent of $\theta$.  In the observer frame $\rfr{S}$,
+however, this will no longer be true.  Consider the solid-angular ring
+of angular width $d\theta$ at angle $\theta$.  This ring has solid
+angle
+\begin{equation}
+d\Omega = \sin\theta\, d\theta
+\end{equation}
+but the photons emitted into that ring in $\rfr{S}$ are emitted into a
+different ring in $\rfr{S}'$ with solid angle
+\begin{equation}
+d\Omega' = \sin\theta'\, d\theta'
+\end{equation}
+where $\theta$ and $\theta'$ are related by (\ref{eqn:aber}).  Taking
+the derivative of (\ref{eqn:aber})
+\begin{eqnarray}
+\sin\theta'\,d\theta' & = & \frac{\sin\theta\,d\theta}{1-\beta\,\cos\theta}
+  + \frac{(\cos\theta-\beta)(\beta\,\sin\theta\,d\theta)}
+         {(1-\beta\,\cos\theta)^2} \nonumber \\
+ & = & \sin\theta\,d\theta \left[\frac{1-\beta^2}
+         {(1-\beta\,\cos\theta)^2}\right] \nonumber \\
+ & = & \frac{\sin\theta\,d\theta}{\gamma^2\,(1-\beta\,\cos\theta)^2}
+\end{eqnarray}
+so the ratio of solid angles is
+\begin{equation}
+\frac{d\Omega}{d\Omega'}=\gamma^2\,(1-\beta\,\cos\theta)^2
+\end{equation}
+the square root of which is the ratio of energies $E'/E$ (by the
+Doppler shift) or the ratio of rates of photon production
+$\Gamma'/\Gamma$ (by the same).  Putting it all together, since the
+inferred brightness is proportional to the energies times the rate
+divided by the solid angle, the ratio of brightness $I/I'$ between the
+observer and rest frames is
+\begin{equation}
+\frac{I}{I'} = \left[\gamma\,(1-\beta\,\cos\theta)\right]^{-4}
+\end{equation}
+or in terms of redshift, $(1+z)^{-4}$!
+
+\begin{problem}
+Plot the observed brightness $I$ as a function of angle $\theta$
+according to an observer at rest in $\rfr{S}$ observing an object
+radiating isotropically in its rest frame $\rfr{S}'$.
+\end{problem}
+
+
+\section{The appearance of passing objects}
+\label{sec:appearance}
+
+Consider a rectangular plank of rest dimensions\footnote{The ``rest
+dimensions'' are the dimensions the object has in its rest frame.}
+$X\times Y$ moving at speed $v=\beta c$ in the $x$-direction,
+perpendicular to the line of sight to a distant observer, as shown in
+Figure~\ref{fig:plank1}.
+\begin{figure}
+\horfigure{plank1.eps}
+\caption[A moving plank]{
+A plank of rest dimensions $X\times Y$ moves at speed $\beta$
+perpendicular to the line of sight to a distant observer.}
+\label{fig:plank1}
+\end{figure}
+The light coming from the corners marked A and B get to the observer
+before the light coming from corner C by a time interval $Y/c$.  For
+this reason, at any instant of time, the plank will appear ``rotated''
+to the observer, as you will show in the problems.  There is a nice
+discussion of this apparent rotation effect in French (1966,
+pp.~149--152).  The apparent rotation actually needs to be taken into
+account by astrophysicists modeling features in relativistic jets
+emitted by radio galaxies and stars (e.g., Lind \& Blandford 1985).
+
+\begin{problem}
+What is the apparent position of corner C to the observer in
+Figure~\ref{fig:plank1} at the time that the light from corners A and
+B reach the observer?  From this information, as well as length
+contraction, compute the apparent locations of all four corners.
+\end{problem}
+
+\begin{problem}
+Why doesn't the observer see corner D?
+\end{problem}
+
+
+\section{A simpleminded cosmology}
+\label{sec:cosmology}
+
+We know that the Universe is expanding.  In fact, we know that except
+for a few, very close neighbours, other galaxies are receding from our
+own and recession speed is proportional to distance from us.  This
+effect is known as the {\em Hubble flow,\/} named after the astronomer
+who first discovered it (Hubble, 1929).  This Hubble flow is naturally
+explained by a simple cosmological scenario in which the Universe
+begins with an explosion, and this scenario does not require our
+galaxy to be at the center.
+
+Consider an infinite Lorentz frame $\rfr{S}'$ with a small rock at
+rest at the origin.  At time $t'=0$ in this frame, the rock explodes
+into countless tiny fragments with masses small enough to ensure that
+gravitational forces do not significantly affect the constant-velocity
+(speed and direction) trajectories.  At time $t'>0$, there is some
+distribution of fragments in space, with the faster-moving fragments
+further out from the explosion point.  Because all fragment world
+lines are constant-velocity and pass through the event (0,0,0,0) in
+$\rfr{S}'$, the vector displacement $\tv{r}'$ in frame $\rfr{S}'$ of
+a fragment with velocity $\tv{v}'$ is given by $\tv{r}'=\tv{v}'\,
+t'$.
+
+Now consider another frame $\rfr{S}$ which also has the explosion at
+the origin, but which is moving along with one of the fragments not at
+rest in $\rfr{S}'$.  In $\rfr{S}$, all the fragments have
+constant-velocity worldlines that pass through the event (0,0,0,0).
+Therefore in $\rfr{S}$ also, the displacement $\tv{r}$ at time $t>0$
+of a fragment with velocity $\tv{v}$ is given by $\tv{r} =\tv{v}\, t$.
+That is, at any time $t>0$, recession speed is proportional to
+distance from the origin even though the origin is not at (or even at
+rest with respect to) the center of the explosion.
+
+If at time $t=t_0$ (now) we live on a fragment (the Milky Way) ejected
+by a huge explosion (the Big Bang) which occurred at time $t=0$, and
+the fragments are not heavy enough to have significantly affected each
+other's velocities via gravitational forces, then by the above
+argument we expect to see other nearby fragments (other galaxies)
+receding from us, with their recession speeds proportional to their
+distances from us; i.e.\ we expect a spherically symmetric Hubble
+flow even if we are not at the center of the Universe.
+
+Of course when we look at an extremely distant object now, we are not
+seeing the object at its current position $\tv{r} (t_0)$, but rather at
+its position $\tv{r} (t_e)$ at time $t_e$ when it emitted the light that
+is now reaching us.  Also, we have no direct measure of the distance
+$r_e=|\tv{r} (t_e)|$, but we can infer it from the redshift $z$ of the
+light that it emits in, say, its hydrogen recombination lines (the
+rest-frame frequencies of which we know).  What is the relationship
+between $z$ and $r_e$?
+
+\begin{figure}
+\verfigure{cosmology.eps}
+\caption[Cosmological spacetime diagram]{
+The spacetime diagram used to derive the redshift-distance relation in
+a simpleminded cosmology.  World lines of the Earth (vertical) and the
+fragment (slope $1/\beta$) are shown.  Event $B$ is the big bang, $E$
+the emission of light and $O$ its observation now on Earth.}
+\label{fig:cosmology}
+\end{figure}
+
+Figure~\ref{fig:cosmology} is the spacetime diagram for a fragment
+moving in $\rfr{S}$ (where $\rfr{S}$ is our rest frame) at velocity
+$\tv{v}$, with coordinates aligned so that $\tv{v}$ points in the
+$x$-direction.  The Big Bang occurs at event $B$, the origin
+($c\,t=x=0$); the fragment emits light at event $E$ ($c\,t=c\,t_e$,
+$x=r_e$); and we observe the light at event $O$, now ($c\,t=c\,t_0$,
+$x=0$).
+
+It should be obvious from the diagram that $c\,t_0=r_e/\beta+r_e$, where
+$\beta=|\tv{v}|/c$ and that the proper time $\tau_{BE}$ elapsed for
+the fragment between $B$ and $E$ is given by
+$(c\,\tau_{BE})^2=(r_e/\beta)^2-r_e^2$.  From these relations and the
+fact that the redshift $z$ is given by $1+z=t_0/\tau_{BE}$
+(Section~\ref{sec:redshift}) it is easy to show that
+\begin{equation}
+\label{eqn:angdidis}
+r_e=c\,t_0\,\frac{2z+z^2}{2(1+z)^2}
+\end{equation}
+(the student is encouraged to show this). It should be obvious, both
+from Figure~\ref{fig:cosmology} and the above equation, that the
+maximum value for $r_e$ is $c\,t_0/2$ when $z\rightarrow\infty$, and
+that for small $z$, $r_e=c\,t_0\,z$.
+
+In addition to inference from redshift, the distance to a fragment can
+be determined several other ways.  If one knows the size of the
+fragment, its angular diameter can be measured, and the ratio of the
+quantities should provide the distance $r_e$.  For this reason, $r_e$
+is referred to as the {\em angular diameter
+distance}\footnote{Experienced cosmologists will notice that equation
+(\protect\ref{eqn:angdidis}) is identical in form to the equation
+derived, via general relativity, for the angular diameter distance in
+a ``spatially curved, isotropic, homogeneous, empty space.''  See,
+e.g., Weinberg (1972) or Peebles (1993) for the general-relativistic
+derivation.} to the object, and is often denoted $d_{\rm A}$. If the
+intrinsic luminosity $L$ of a fragment is known, its flux $F$ can be
+measured, and the relation $F=L/(4\pi r^2)$ can be used to determine a
+distance.  However, the {\em luminosity distance\/} $d_{\rm L}$
+determined in this way is different from $d_{\rm A}$ by four factors
+of $(1+z)$ because of the effect of redshift on brightness discussed
+in Section~\ref{sec:beaming}.
+
+The cosmology presented in this section is a simple Milne cosmology, a
+more general version of which (including gravity) is described by
+Milne (1934).  Most cosmologists now believe that the expansion of the
+Universe is governed by general relativity, but it is nonetheless true
+that most cosmological observations can be explained by this simple
+kinematic model.

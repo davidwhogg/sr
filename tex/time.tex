@@ -1,0 +1,505 @@
+\chapter{Time dilation and length contraction}
+\label{chap:time}
+
+This Chapter is intended to demonstrate the simplicity of special
+relativity.  With one basic thought experiment the two most important
+effects predicted by the theory are derived: time dilation and length
+contraction.  For the beginning student of relativity, this is the
+most important chapter.
+
+It is emphasized that the predicted effects are real, not just
+apparent.
+
+Before starting, recall Einstein's (1905) principle of relativity
+(hereafter ``the'' principle of relativity): there is no preferred
+reference frame; no entirely on-board experiment can tell a sailor the
+speed of her or his boat.  Its first consequence is that the speed of
+light is the same in all frames.
+
+
+\section{Time dilation}
+\label{sec:timedilation}
+
+Consider two observers, Deepto (D) and Erika (E), moving relative to
+one another in spaceships.  D measures E's speed to be $u$ with
+respect to D's rest frame.  By symmetry, E must also measure D's speed
+to be $u$ with respect to E's rest frame.  If this is not obvious to
+you, notice that there is no absolute difference between D and E.  If
+they did not measure the same speed, which one of them would measure a
+higher speed?  In order for one to measure a higher speed, one of them
+would have to be in a special or ``preferred'' frame; the principle of
+relativity precludes this.
+
+Now imagine that D and E each carry a clock of a certain very strange
+type.  These ``light-clocks''\index{light-clock} consist of an
+evacuated glass tube containing a lightbulb, a mirror, a photodetector
+and some electrical equipment.  The photodetector is right next to the
+lightbulb (but separated by a light-blocking shield) and the mirror is
+0.5 m from the lightbulb (see Figure~\ref{fig:lightclock}).  When the
+clock is started, the lightbulb flashes, light bounces off the mirror
+and back into the photodetector.  When the photodetector registers the
+light, it immediately signals the lightbulb to flash again.  Every
+time the photodetector registers a light pulse, it flashes the bulb
+again.
+
+\begin{figure}
+\horfigure{lightclock.eps}
+\caption[Schematic of a light-clock]{
+The schematic layout of a light-clock.  The round-trip distance
+(lightbulb to mirror to photodetector) for the light is 1 m.}
+\label{fig:lightclock}
+\end{figure}
+
+The round-trip distance for the light inside the light-clock is 1~m
+and the speed of light $c$ is roughly $3\times 10^8~\ms$, so the
+round-trip time for the light is roughly $3.3\times 10^{-9}~{\rm s}$.
+The clock ticks off time in $3.3~{\rm ns}$ (nanosecond) intervals.
+The speed of light is the same for all observers, so $c$ can be seen
+as a conversion factor between time and distance.  Under this
+interpretation, the clock ticks off time in meters!\footnote{Now that
+the meter is defined in terms of the second, this is in fact the
+interpretation of the speed of light that the International Standards
+Organization accepts.  The speed of light is {\em defined\/} to be
+$2.99792458\times 10^8~\ms$.}
+
+% Need a reference for the definition thing.
+
+Imagine that D holds his light-clock so that the light is bouncing
+back and forth at right angles to his direction of motion with respect
+to E.  D observes the light flashes in his clock to make 1 m round
+trips in $\Delta t=3.3~{\rm ns}$ intervals.  What does E observe?
+Recall that D is moving at speed $u$ with respect to E, so in E's rest
+frame the light in D's clock is not really making round trips.  As it
+travels down the tube and back, D is advancing in the perpendicular
+direction; the light takes a zig-zag path which is longer than the
+straight back-and-forth path (see Figure~\ref{fig:trajectories}).  By
+the principle of relativity, E and D must observe the same speed of
+light, so we are forced to conclude that E will measure\footnote{What
+is meant by ``measure'' here is explained in the next Section---Erika
+is a very good scientist!} longer time intervals $\Delta t'$ between
+the flashes in D's clock than D will.  (In this chapter, all
+quantities that E measures will be primed and all that D measures will
+be unprimed.)  What is the difference between $\Delta t$ and $\Delta
+t'$?
+
+\begin{figure}
+\horfigure{trajectories.eps}
+\caption[Trajectories of light seen by D and E]{The trajectory of the
+light in D's light-clock, as observed by (a)~D and (b)~E.  Note that
+the light follows a longer path in E's frame, so E measures a longer
+time interval $\Delta t'$.}
+\label{fig:trajectories}
+\end{figure}
+
+In E's rest frame, in time $\Delta t'$, D advances a distance $\Delta
+x'=u\,\Delta t'$ and the light in D's clock must go a total distance
+$\Delta\ell'=c\,\Delta t'$.  By the Pythagorean theorem
+$(\Delta\ell')^2=(\Delta x')^2+(\Delta y)^2$, where $\Delta y$ is the
+total round-trip length of the clock ($1~{\rm m}$ in this case) in its
+rest frame and for now it has been assumed that $\Delta y=\Delta y'$
+(this will be shown in Section~\ref{sec:lengthcontraction}).  Since
+$\Delta y=\Delta\ell =c\,\Delta t$, we find
+\begin{equation}
+\Delta t'=\frac{\Delta t}{\sqrt{1-\frac{u^2}{c^2}}}
+\end{equation}
+The time intervals between flashes of D's clock are longer as
+measured by E than as measured by D.  This effect is called {\em time
+dilation.\/}\index{time dilation} Moving clocks go slow.
+
+It is customary to define the dimensionless speed $\beta$ and the {\em
+Lorentz factor\/} $\gamma$ by
+\begin{equation}
+\beta\equiv\frac{u}{c}
+\end{equation}
+\begin{equation}
+\gamma\equiv\frac{1}{\sqrt{1-\beta^2}}
+\end{equation}
+Because (as we shall see later) nothing travels faster than the speed
+of light, $u$ is always less than $c$, so $0\leq\beta <1$, and
+$\gamma\geq 1$.  Using these new symbols, $\Delta t'=\gamma\,\Delta
+t$.
+
+Above we found that ``moving clocks go slow,'' but one might object
+that we have shown only that these strange light-clocks go slow.
+However, we can show that {\em all\/} clocks are subject to the same
+time dilation.  Suppose that in addition to his light-clock, D also
+has a wristwatch that ticks every $3.3~{\rm ns}$, and suppose
+(incorrectly) that this watch is not subject to time dilation; i.e.,
+suppose that E observes the watch to tick with intervals of $3.3~{\rm
+ns}$ no matter what D's speed.  When D is not moving with respect to E
+the wristwatch and light-clock tick at the same rate, but when D is
+moving at high speed, they tick at different rates because, by
+supposition, one is time-dilated and the other is not.  D could use
+the relative tick rates of the watch and clock to determine his speed,
+and thereby violate the principle of relativity.  It is left to the
+ambitious reader to prove that it is not possible for D to observe
+both timepieces to tick at the same rate while E observes them to tick
+at different rates.
+
+The reader might object that we have already violated relativity: if D
+and E are in symmetric situations, how come E measures longer time
+intervals?  We must be careful.  E measures longer time intervals for
+D's clock than D does.  By relativity, it must be that D {\em also\/}
+measures longer time intervals for E's clock than E does.  Indeed this
+is true; after all, all of the above arguments are equally applicable
+if we swap D and E.  This is the fundamentally counterintuitive aspect
+of relativity.  How it can be that both observers measure slower rates
+on the other's clock?  The fact is, there is no contradiction, as long
+as we are willing to give up on a concept of absolute time,
+agreed-upon by all observers.  The next two Chapters explore this and
+attempt to help develop a new intuition.
+
+\begin{problem}
+Your wristwatch ticks once per second.  What is the time interval
+between ticks when your wristwatch is hurled past you at half the
+speed of light?
+\end{problem}
+
+\begin{problem}
+How fast does a clock have to move to be ticking at one tenth of its
+rest tick rate?  One one-hundredth?  One one-thousandth?  Express your
+answers in terms of the difference $1-\beta$, where of course
+$\beta\equiv v/c$.
+\end{problem}
+
+\begin{problem}
+Consider the limit in which $\gamma\gg 1$, so its inverse $1/\gamma$
+is a small number.  Derive an approximation for $\beta$ of the form
+$\beta\approx 1-\epsilon$ which is correct to second order in
+$1/\gamma$.
+\end{problem}
+
+\begin{problem}
+Consider the low-speed limit, in which $\beta\ll 1$.  Derive an
+expression for $\gamma$ of the form $\gamma\approx 1+\epsilon$ which
+is correct to second order in $\beta$.
+\end{problem}
+
+\begin{problem}
+Prove (by thought experiment) that it is not possible for D to observe
+both his light-clock and his wristwatch to tick at the same rate while
+E observes them to tick at different rates.  ({\em Hint:\/} Imagine
+that both of D's clocks punch a ticker tape and the experimentalists
+compare the tapes after the experiment is over.)
+\end{problem}
+
+
+\section{Observing time dilation}
+\label{sec:observing}
+
+In the previous section, as in the rest of these notes, it is
+important to distinguish between what an ideally knowledgeable
+observer\index{observer, definition of} {\em observes\/} and what an
+ordinary person {\em sees.\/} As much as possible, the term ``to
+observe'' will be used to mean ``to measure a real effect with a
+correct experimental technique,'' while ``to see'' will be reserved
+for apparent effects, or phenomena which relate to the fact that we
+look from a particular viewpoint with a particular pair of eyes.  This
+means that we won't talk about what is ``seen'' in detail until
+Chapter~\ref{chap:astronomy}.
+
+Though E {\em observes\/} D's clock to run slow, what she {\em sees\/}
+can be quite different.  The time intervals between the flashes of D's
+clock that she sees depends on the time dilation {\em and\/} the
+changing path lengths that the light traverses in getting to E.  The
+path lengths are changing because D is moving with respect to E (see
+Figure~\ref{fig:observing}).  In order to correctly measure the rate
+of D's clock, E must subtract the light-travel time of each pulse
+(which she can compute by comparing the direction from which the light
+comes with the trajectory that was agreed upon in advance).  It is
+only when she subtracts these time delays that she measures the time
+between ticks correctly, and when she does this, she will find that
+the time between ticks is indeed $\Delta t'$, the dilated time.
+
+\begin{figure}
+\horfigure{observing.eps}
+\caption[Observing time delay]{Observing the time delay.  Because D is
+moving with respect to E, the flashes ($F_1$ through $F_4$) from his
+clock travel along paths ($S_1$ through $S_4$) of different lengths in
+getting to E.  Hence different flashes take different times to get to
+E.  E must correct for this before making any statements about time
+dilation.  It is after the correction is made that E observes the
+predicted time dilation.}
+\label{fig:observing}
+\end{figure}
+
+\begin{problem}
+Consider a clock, which when at rest produces a flash of light every
+second, moving away from you at $(4/5)c$.  (a)~How frequently does it
+flash when it is moving at $(4/5)c$?  (b)~By how much does distance
+between you and the clock increase between flashes?  (c)~How much
+longer does it take each flash to get to your eye than the previous
+one?  (d)~What, therefore, is the interval between the flashes you
+see?
+\end{problem}
+
+You will find that the time interval between the flashes you see is
+much longer than merely what time-dilation predicts, because
+successive flashes come from further and further away.  This effect is
+known as the Doppler shift and is covered in much more detail in
+Chapter~\ref{chap:astronomy}
+
+
+\section{Length contraction}
+\label{sec:lengthcontraction}
+
+Imagine that E observes D's clock to tick 100 times during a journey
+from planet A to planet B, two planets at rest in E's rest frame.
+
+D must also observe 100 ticks during this same journey.  After all, if
+we imagine that the clock punches a time card each time it ticks and D
+inserts the time card at point A and removes it at point B, it must
+have been punched a definite number of times when it is removed.  D
+and E must agree on this number, because, for example, they can meet
+later and examine the card.
+
+In addition to agreeing on the number of ticks, D and E also agree on
+their relative speed.  (They must, because there is total symmetry
+between them: if one measured a larger speed, which one could it be?)
+However, they do {\em not\/} agree on the rate at which D's clock
+ticks.  While E measures the distance between A and B to be
+$\ell'=100\, u\,\Delta t'$, D measures it to be $\ell=100\, u\,\Delta
+t=\ell'/\gamma$.  Since $\gamma >1$, D measures a {\em shorter\/}
+distance than E.  D is moving relative to the planets A and B, while E
+is stationary.  Planets A and B can be thought of as being at the ends
+of a ruler stick which E is holding, a ruler stick which is moving
+with respect to D.  We conclude that moving ruler sticks are
+shortened; this effect is {\em length contraction,\/} or sometimes
+{\em Lorentz contraction.\/}
+
+It is simple to show that length contraction acts only parallel to the
+direction of motion.  Imagine that both E and D are carrying identical
+pipes, aligned with the direction of their relative motion (see
+Figure~\ref{fig:pipes}).
+\begin{figure}
+\horfigure{pipes.ps}
+\caption[E and D carrying pipes]{E and D carrying pipes to prove that
+there can be no length changes perpendicular to the direction of
+motion.}
+\label{fig:pipes}
+\end{figure}
+Let us assume (incorrectly) that the large relative velocity causes
+the diameter of E's pipe to contract in D's frame.  If this happens,
+D's pipe becomes larger than E's pipe, so E's pipe ``fits inside'' D's
+pipe.  But E and D are interchangeable, so D's pipe contracts in E's
+frame and D's pipe fits inside E's.  Clearly it cannot be that both
+D's fits inside E's and E's fits inside D's, so there is a
+contradiction; there can be no length changes perpendicular to the
+direction of relative motion.
+
+Note that because there are no length changes perpendicular to the
+direction of motion, we cannot explain away time dilation and length
+contraction with length changes in the light-clock perpendicular to
+the direction of motion.
+
+\begin{problem}
+How fast do you have to throw a meter stick to make it one-third its
+rest length?
+\end{problem}
+
+\begin{problem}
+Two spaceships, each measuring $100~{\rm m}$ in its own rest frame,
+pass by each other traveling in opposite directions.  Instruments on
+board spaceship A determine that the front of spaceship B requires
+$5\times10^{-6}~{\rm s}$ to traverse the full length of A.  (a)~What
+is the relative velocity $v$ of the two spaceships?  (b)~How much time
+elapses on a clock on spaceship B as it traverses the full length of
+A?  (From French 1966.)
+\end{problem}
+
+\begin{problem}
+That there can be no length contraction perpendicular to the direction
+of motion is often demonstrated with the example of a train and its
+track; i.e., if there were length changes perpendicular the train
+would no longer fit on the track.  Make this argument, and in
+particular, explain why the train must fit on the track no matter how
+fast it is going.
+\end{problem}
+
+
+\section{Magnitude of the effects}
+\label{sec:mageff}
+
+As these example problems show, the effects of time dilation and
+length contraction are extremely small in everyday life, but large
+for high-energy particles and any practical means of interstellar
+travel.
+
+\begin{problem}
+In the rest frame of the Earth, the distance $\ell$ between New York
+and Los Angeles is roughly $4000$~km.  By how much is the distance
+shortened when observed from a jetliner flying between the cities?
+From the Space Shuttle?  From a cosmic ray proton traveling at $0.9c$?
+\end{problem}
+
+In the rest frame, the distance is $\ell$; to an observer traveling at
+speed $u$ along the line joining the cities, it is
+$\ell'=\ell/\gamma$.  The difference is
+\begin{equation}
+\ell-\ell' = \left(1-\frac{1}{\gamma}\right)\,\ell
+     = \left(1-\sqrt{1-\beta^2}\right)\,\ell
+\end{equation}
+For $\epsilon$ much smaller than unity, $(1+\epsilon)^n\approx
+1+n\,\epsilon$, so for speeds $u\ll c$ or $\beta\ll 1$, we have
+\begin{equation}
+\ell-\ell'\approx \frac{1}{2}\,\beta^2\,\ell
+\end{equation}
+
+A jetliner takes about $6~{\rm h}$ to travel from New York to Los
+Angeles, so its speed is roughly $u=4000/6~\kmh$ or $\beta=6\times
+10^{-7}$.  Since $\beta\ll 1$, we have that $\ell-\ell'\approx 8\times
+10^{-7}~{\rm m}$, or $0.8$~microns!  The Space Shuttle takes about
+$1.5~{\rm h}$ to orbit the earth, on an orbit with radius roughly
+$6500~{\rm km}$, so $\beta=2.5\times 10^{-5}$.  Here $\ell-\ell'\approx
+1.3~{\rm mm}$.
+
+As for the cosmic ray proton, $\beta=0.9$, so it is no longer true
+that $\beta\ll 1$; we gain nothing by using the approximation.  We
+find $\gamma=2.3$ and so $\ell-\ell'=2300~{\rm km}$.
+
+\begin{problem}
+At rest in the laboratory, muons have a mean life $T$ of $2.2\times
+10^{-6}~{\rm s}$ or $2.2~{\rm \mu s}$, or in other words, the average
+time a muon exists from production (in a collision, say) to decay
+(into an electron and neutrinos) is $2.2~{\rm \mu s}$ (Particle Data
+Group, 1994).  If, as experimentalists, we need a sample of muons to
+have a longer mean life of $T'=11~{\rm \mu s}$, to what speed $u$ must
+we accelerate them?  What distance $\ell$, on average, does one of
+these high-speed muons travel before decaying?
+\end{problem}
+
+We want the muons to age at $1/5$ their usual rate, so we want time
+dilation by a factor $\gamma=5$.  Inverting the formula for $\gamma$
+we find
+\begin{equation}
+\beta=\sqrt{1-\frac{1}{\gamma^2}}
+\end{equation}
+or in this case $\beta=24/25$.  This makes $u=24c/25$ and
+$\ell=u\,T=630~{\rm m}$.
+
+\begin{problem}
+Alpha Centauri is a distance of $\ell=4.34$~light years (one light
+year is the distance light travels in one year) from the Earth.  At
+what speed $u$ must a 25-year-old astronaut travel there and back if
+he or she is to return before reaching age 45?  By how much will the
+astronaut's siblings age over the same time?
+\end{problem}
+
+This is the famous ``twin paradox,'' which we will cover in gory
+detail in Section~\ref{sec:twins}.  For now, let us be simplistic and
+answer the questions without thinking.
+
+We want the elapsed time $T'$ in the astronaut's frame to be 20 years
+as he or she goes a distance $2\ell'$, the distance from the Earth to
+Alpha Centauri and back in the astronaut's frame.  The time and
+distance are related by $T'=2\ell'/u=2\ell/(\gamma u)$.  So we need
+$\gamma u=2\ell/T'$.  Dividing by $c$, squaring and expanding we need
+\begin{equation}
+\frac{\beta^2}{1 - \beta^2} = \left(\frac{2\,\ell}{c\,T'}\right)^2
+ = (0.434)^2
+\end{equation}
+This is a linear equation for $\beta^2$; we find $\beta=0.398$.  So
+the astronaut must travel at $u=0.398c$, and from the point of view of
+the siblings, the trip takes $T=2\ell /u=21.8~{\rm yr}$.
+
+
+\section{Experimental confirmation}
+\label{sec:experimental}
+
+As we have seen in the previous section, the effects of time dilation
+and length contraction are not very big in our everyday experience.
+However, these predictions of special relativity {\em have\/} been
+confirmed experimentally.  Time dilation is generally easier to
+confirm directly because Nature provides us with an abundance of
+moving clocks, and because in such experiments, it is generally more
+straightforward to design procedures in which the delays from light
+travel time (discussed in Section~\ref{sec:observing}) are not
+important. Of course in addition to experiments like the one discussed
+in this section, both time dilation and length contraction are
+confirmed indirectly countless times every day in high energy physics
+experiments around the world.
+
+The first direct confirmation of time dilation was obtained by Bruno
+Rossi\index{Rossi, B.} and David Hall,\index{Hall, D. B.} studying the
+decay of muons (in those days called ``mesotrons'' or ``mu mesons'')
+as they descend through the Earth's at\-mo\-sphere.\footnote{The
+information in this section comes from Rossi \& Hall (1941), their
+extremely readable, original paper.}  Muons are elementary
+particles\footnote{For those who care, muons are {\em leptons,\/} most
+analogous to electrons, with the same charge but considerably more
+mass.  They are unstable and typically decay into electrons and
+neutrinos.} produced at high altitude when cosmic rays (fast-moving
+protons and other atomic nuclei) collide with atoms in the Earth's
+atmosphere.  When produced more or less at rest in the laboratory,
+each muon has a mean lifetime of $\tau_0=2.5\times 10^{-6}$ seconds
+before it disintegrates.  Indeed, if one has $N_0$ muons at time zero
+and then looks at a later time $t$, the number of muons will have
+dropped to $N(t)=N_0\,e^{-t/\tau_0}$.  If there were no such thing as
+time dilation, the mean distance a muon moving at high speed $v=\beta
+c$ could travel before disintegrating would be $L=v\tau_0$.  Similarly
+if at position zero one has $N_0$ muons moving at speed $v$ down a
+tube, at a position $x$ further down the tube there would be only
+$N(x)=N_0\,e^{-x/L}$.  As the speed of the muons approaches $c$, the
+mean range would approach $c\tau_0$, or $750$~m.  Since the muons are
+created at high altitude, very few of them could reach the ground.
+
+However, we expect that time dilation {\em does\/} occur, and so the
+mean life $\tau$ and range $L$ of the moving muons will be increased
+by the Lorentz factor $\gamma\equiv(1-\beta^2)^{-1/2}$ to
+$\tau=\gamma\,\tau_0$ and $L=\gamma\,v\,\tau_0$.  Although all the
+muons will be moving at speeds close to $c$ ($\beta$ nearly 1), they
+will have different particular values of $\gamma$ and therefore decay
+with different mean ranges.  Bruno \& Rossi measure the fluxes (number
+of muons falling on a detector of a certain area per minute) of muons
+of two different kinetic energies at observing stations in Denver and
+Echo Lake, Colorado, separated in altitude by $\Delta h=1624$~m
+(Denver below Echo Lake).  The higher-energy muons in their experiment
+have Lorentz factor $\gamma_1\approx 18.8$ (speed $v_1\approx
+0.9986c$) while the lower-energy muons have $\gamma_2\approx 6.3$
+($v_2\approx 0.987c$).  Because we expect the mean range $L$ of a muon
+to be $L=\gamma\,v\,\tau_0$, we expect the ratio of ranges $L_1/L_2$
+for the two populations of muons to be $(\gamma_1\, v_1)/(\gamma_2\,
+v_2)\approx 3.0$.  The flux of higher-energy muons at Denver is lower
+by a factor of $0.883\pm 0.005$ than it is at Echo Lake, meaning that
+if they have mean range $L_1$, $e^{-\Delta h/L_1}=0.883$.  The flux of
+lower-energy muons decreases by a factor of $0.698\pm 0.002$, so
+$e^{-\Delta h/L_2}=0.698$.  Taking logarithms and ratios, we find that
+$L_1/L_2=2.89$ as predicted.  The results do not make sense if the
+time dilation factor (the Lorentz factor) is ignored.
+
+%[Add a description of Lorentz's work on contraction of the electric
+%field of moving charges?]
+
+\begin{problem}
+Consider a muon traveling straight down towards the surface of the
+Earth at Lorentz factor $\gamma_1\approx 18.8$.  (a)~What is the
+vertical distance between Denver and Echo Lake, according to the muon?
+(b)~How long does it take the muon to traverse this distance,
+according to the muon?  (c)~What is the muon's mean lifetime,
+according to the muon?  (d)~Answer the above parts again but now for
+a muon traveling at Lorentz factor $\gamma_2\approx 6.3$.
+\end{problem}
+
+\begin{problem}
+Charged pions are produced in high-energy collisions between protons
+and neutrons.  They decay in their own rest frame according to the law
+\begin{equation}
+N(t) = N_0\,2^{-t/T}
+\end{equation}
+where $T=2\times 10^{-8}~{\rm s}$ is the half-life.  A burst of pions
+is produced at the target of an accelerator and it is observed that
+two-thirds of them survive at a distance of $30~{\rm m}$ from the
+target.  At what $\gamma$ value are the pions moving?  (From French
+1966.)
+\end{problem}
+
+\begin{problem}
+A beam of unstable $\rm K^+$ mesons, traveling at speed
+$\beta=\sqrt{3}/2$, passes through two counters $9~{\rm m}$ apart.
+The particles suffer a negligible loss of speed and energy in passing
+through the counters but give electrical pulses that can be counted.
+It is observed that $1000$ counts are recorded in the first counter
+and $250$ in the second.  Assuming that this whole decrease is due to
+decay of the particles in flight, what is their half-life as it would
+be measured in their own rest frame?  (From French 1966.)
+\end{problem}
