@@ -21,7 +21,7 @@
 
 % uncomment for normal book, 12pt
 \documentclass[12pt]{book}
-\usepackage{graphics}
+\usepackage{graphicx}
 \setlength{\oddsidemargin}{1in}
 \setlength{\evensidemargin}{6.5in}
 \addtolength{\evensidemargin}{-\oddsidemargin}
@@ -49,8 +49,8 @@
 
 % define shortcuts for figures
 \newcommand{\path}{.}
-\newcommand{\horfigure}[1]{\resizebox{\figurewidth}{!}{\includegraphics{\path/#1}}}
-\newcommand{\verfigure}[1]{\resizebox{!}{\figurewidth}{\includegraphics{\path/#1}}}
+\newcommand{\horfigure}[1]{\includegraphics[width=\figurewidth]{\path/#1}}
+\newcommand{\verfigure}[1]{\includegraphics[height=\figurewidth]{\path/#1}}
 
 % Mathematical symbols
 % 3-vectors
