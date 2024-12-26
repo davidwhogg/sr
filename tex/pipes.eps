@@ -1,40 +1,40 @@
 %!PS-Adobe-2.0 EPSF-2.0
+%%BoundingBox: 0 0 359 190
+%%HiResBoundingBox: 0.000000 0.000000 359.000000 190.000000
 %%Title: /scr/dwh/pipes.ps
 %%Creator: XV Version 3.10a  Rev: 12/29/94  -  by John Bradley
-%%BoundingBox: 0 0 359 190
-%%Pages: 1
 %%DocumentFonts:
 %%EndComments
+% EPSF created by ps2eps 1.70
+%%BeginProlog
+save
+countdictstack
+mark
+newpath
+/showpage {} def
+/setpagedevice {pop} def
 %%EndProlog
-
+%%Page 1 1
+%%EndProlog
 %%Page: 1 1
-
 % remember original state
 /origstate save def
-
 % build a temporary dictionary
 20 dict begin
-
 % define string to hold a scanline's worth of data
 /pix 137 string def
-
 % define space for color conversions
 /grays 1089 string def  % space for gray scale line
 /npixls 0 def
 /rgbindx 0 def
-
 % lower left corner
 0 0 translate
-
 % size of image (on paper, in 1/72inch coords)
 359.35200 190.44000 scale
-
 % dimensions of data
 1089 577 1
-
 % mapping matrix
 [1089 0 0 -577 0 577]
-
 {currentfile pix readhexstring pop}
 image
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -2345,14 +2345,15 @@ ffffffffffffffffffe1ffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-
-
 showpage
-
 % stop using temporary dictionary
 end
-
 % restore original state
 origstate restore
-
 %%Trailer
+%%Trailer
+cleartomark
+countdictstack
+exch sub { end } repeat
+restore
+%%EOF
