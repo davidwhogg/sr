@@ -1,36 +1,18 @@
 % This is a LaTeX file
-% by David W. Hogg, 1995
-
-% uncomment for two column book, fullpage
-%\documentstyle[psfig]{hoggbook}
-%\setlength{\topmargin}{-0.5in}
-%\setlength{\textheight}{10in}
-%\setlength{\oddsidemargin}{0in}
-%\setlength{\textwidth}{7in}
-%\setlength{\evensidemargin}{6.5in}
-%\addtolength{\evensidemargin}{-\oddsidemargin}
-%\addtolength{\evensidemargin}{-\textwidth}
-%\setlength{\headsep}{3ex}
-%\setlength{\headheight}{7pt}
-%\addtolength{\textheight}{-\headsep}
-%\addtolength{\textheight}{-\headheight}
-%\setlength{\footskip}{0.25in}
-%\newlength{\figurewidth}
-%\setlength{\figurewidth}{0.48\textwidth}
-%\sloppy
+% by David W. Hogg, 1995-2024
 
 % uncomment for normal book, 12pt
-\documentclass[12pt]{book}
+\documentclass[10pt]{book}
 \usepackage{graphicx}
-\setlength{\oddsidemargin}{1in}
-\setlength{\evensidemargin}{6.5in}
-\addtolength{\evensidemargin}{-\oddsidemargin}
-\addtolength{\evensidemargin}{-\textwidth}
+
+% page layout
+\usepackage[letterpaper]{geometry}
+\setlength{\textwidth}{4.50in}
+\setlength{\oddsidemargin}{3.25in}\addtolength{\oddsidemargin}{-0.5\textwidth} % centering hack
+\setlength{\evensidemargin}{\oddsidemargin}
 \newlength{\figurewidth}
 \setlength{\figurewidth}{\textwidth}
-
-% get footnotes with symbols
-%\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\frenchspacing\sloppy\sloppypar\raggedbottom
 
 % make headers lower-case
 \renewcommand{\MakeUppercase}[1]{#1}
