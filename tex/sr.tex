@@ -1,6 +1,12 @@
 % This is a LaTeX file
 % by David W. Hogg, 1995-2024
 
+% To-do items
+% -----------
+% - switch all figures over to "hoggfigure" macro.
+% - remove all {\em} and go to \emph{}
+% - demolish the ugly preface!
+
 % uncomment for normal book, 12pt
 \documentclass[10pt]{book}
 \usepackage{graphicx}
@@ -8,6 +14,7 @@
 % page layout
 \usepackage[letterpaper]{geometry}
 \setlength{\textwidth}{4.50in}
+\setlength{\textheight}{8.50in}
 \setlength{\oddsidemargin}{3.25in}\addtolength{\oddsidemargin}{-0.5\textwidth} % centering hack
 \setlength{\evensidemargin}{\oddsidemargin}
 \newlength{\figurewidth}
@@ -31,10 +38,10 @@
 
 % define figures
 \newcommand{\path}{.}
-\newcommand{\hfigure}[4]{%
-  \begin{figure}[h!]
-    \horfigure{#2}
-    \caption[#1]{\slshape{#3}\label{#4}}
+\newcommand{\hoggfigure}[4]{%
+  \begin{figure}[tp]%
+    {#2}%
+    \caption[#1]{\slshape{#3}\label{#4}}%
   \end{figure}}
 \newcommand{\horfigure}[1]{\includegraphics[width=\figurewidth]{\path/#1}}
 \newcommand{\verfigure}[1]{\includegraphics[height=\figurewidth]{\path/#1}}
