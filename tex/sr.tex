@@ -29,8 +29,13 @@
   \end{slshape}
 }
 
-% define shortcuts for figures
+% define figures
 \newcommand{\path}{.}
+\newcommand{\hfigure}[4]{%
+  \begin{figure}[h!]
+    \horfigure{#2}
+    \caption[#1]{\slshape{#3}\label{#4}}
+  \end{figure}}
 \newcommand{\horfigure}[1]{\includegraphics[width=\figurewidth]{\path/#1}}
 \newcommand{\verfigure}[1]{\includegraphics[height=\figurewidth]{\path/#1}}
 
